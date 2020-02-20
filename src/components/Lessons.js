@@ -20,14 +20,21 @@ const useStyles = makeStyles({
 
 export default function Lessons() {
     const [checked, setChecked] = React.useState(false);
+    const [checked1, setChecked1] = React.useState(false);
+
     const classes = useStyles()
 
     const handleChange = event => {
         setChecked(event.target.checked);
     };
 
+    const handleChange1 = event => {
+        setChecked1(event.target.checked1);
+    };
+
 
     return (
+        <div>
         <Card className={classes.root}>
             <CardActionArea>
                 <CardMedia
@@ -37,7 +44,7 @@ export default function Lessons() {
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                        What are the Stock Markets?
+                        What is the Stock Market?
           </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
                         Short answer: A world where companies sell themselves
@@ -45,7 +52,7 @@ export default function Lessons() {
                 </CardContent>
             </CardActionArea>
             <CardActions>
-                Read?
+                Completed?
                 <Checkbox
                     checked={checked}
                     onChange={handleChange}
@@ -57,6 +64,41 @@ export default function Lessons() {
         </Button>
             </CardActions>
         </Card>
+            
+            <br/>
+            <br/>
+
+            <Card className={classes.root}>
+                <CardActionArea>
+                    <CardMedia
+                        className={classes.media}
+                        image="https://lh3.googleusercontent.com/p0yHCFBHP-7R3DhwK6rpBb_fkhRzSLXddm8l1zqZHchDHHlbl4h8D7VdMgjxH6JoPtBME5u0j1m-OYSmpcFNuUHiZXTvYBAv=s1200"
+                        title="Contemplative Reptile"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                            Why do people buy/sell Stock?
+          </Typography>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                            Short Answer: Purchasing instances of stock for a predermined price.
+          </Typography>
+                    </CardContent>
+                </CardActionArea>
+                <CardActions>
+                    Completed
+                <Checkbox
+                        checked={checked1}
+                        onChange={handleChange1}
+                        value="primary"
+                        inputProps={{ 'aria-label': 'primary checkbox' }}
+                    />
+                    <Button size="small" color="primary">
+                        Read more
+        </Button>
+                </CardActions>
+            </Card>
+
+        </div>
     );
     
 }

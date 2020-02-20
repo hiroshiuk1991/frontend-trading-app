@@ -14,6 +14,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import React, { useState } from 'react';
 import API from '../API'
+import { useHistory } from "react-router-dom";
 
 function Copyright() {
     return (
@@ -60,7 +61,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-export default function LandingPage() {
+export default function LandingPage(props) {
     const classes = useStyles();
     const [nameLogin, setNameLogin] = useState('');
     const [passwordLogin, setPasswordLogin] = useState('');
@@ -68,20 +69,29 @@ export default function LandingPage() {
     // const [nameSignup, setNameSignup] = useState('');
     // const [passwordSignup, setPasswordSignup] = useState('');
 
-    let handleSubmit = () => {
-        API.login(this.state.nameLogin, this.state.passwordLogin)
+    const history = useHistory();
+
+
+    function handleClick() {
+        history.push("/LoginPage");
+    }
+
+    let handleSubmit = event => {
+        event.preventDefault()
+        API.login(nameLogin, passwordLogin)
             .then(data => {
 
                 if (data.error) throw Error(data.error)
-                this.props.login(data)
-                this.props.history.push('/')
+                props.login(data)
+                props.history.push('/')
             })
-            .catch(error => alert(error))
+            // .catch(error => alert(error))
     }
 
 
 
     return (
+     
         <Grid container component="main" className={classes.root}>
             <CssBaseline />
             <Grid item xs={false} sm={4} md={7} className={classes.image} />
@@ -130,7 +140,7 @@ export default function LandingPage() {
                             variant="contained"
                             color="primary"
                             className={classes.submit}
-                            onChange={event => handleSubmit}
+                            onClick={event => handleSubmit(event)}
                         >
                             Sign In
             </Button>
@@ -141,7 +151,10 @@ export default function LandingPage() {
                 </Link>
                             </Grid>
                             <Grid item>
-                                <Link href="#" variant="body2">
+                                <Link  
+                                onClick={handleClick}              
+                                href="#" 
+                                variant="body2">
                                     {"Don't have an account? Sign Up"}
                                 </Link>
                             </Grid>
@@ -153,5 +166,6 @@ export default function LandingPage() {
                 </div>
             </Grid>
         </Grid>
+    
     );
 }

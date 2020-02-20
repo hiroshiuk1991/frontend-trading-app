@@ -4,7 +4,7 @@ import { Line } from 'react-chartjs-2';
 class Markets extends React.Component {
     state = {
         chartData: {
-            labels: ['Boston', 'Worcester', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
+            labels: ['Feb-19', 'Mar-19', 'Springfield', 'Lowell', 'Cambridge', 'New Bedford'],
             datasets: [
                 {
                     label: 'Population',
@@ -17,13 +17,13 @@ class Markets extends React.Component {
                         95072
                     ],
                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(255, 206, 86, 0.6)',
-                        'rgba(75, 192, 192, 0.6)',
-                        'rgba(153, 102, 255, 0.6)',
-                        'rgba(255, 159, 64, 0.6)',
-                        'rgba(255, 99, 132, 0.6)',
+                        'rgb(217, 6, 6)',
+                        // 'rgba(54, 162, 235, 0.6)',
+                        // 'rgba(255, 206, 86, 0.6)',
+                        // 'rgba(75, 192, 192, 0.6)',
+                        // 'rgba(153, 102, 255, 0.6)',
+                        // 'rgba(255, 159, 64, 0.6)',
+                        // 'rgba(255, 99, 132, 0.6)',
                     ]
                 }
             ]
@@ -32,12 +32,13 @@ class Markets extends React.Component {
 
 render () {
     return(
-    <div className="chart">
+        <div className="chart">
+         <h1> The FTSE100 </h1>
        
         <Line
             data={this.state.chartData}
             // width={100}
-            // height={50}
+            height={50}
             options={{
                 title: {
                     display: this.props.displayTitle,
