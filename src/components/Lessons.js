@@ -12,6 +12,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 const useStyles = makeStyles({
     root: {
         maxWidth: 345,
+        marginRight: 40,
     },
     media: {
         height: 140,
@@ -34,7 +35,7 @@ export default function Lessons() {
 
 
     return (
-        <div>
+        <div className='cardContainer'>
         <Card className={classes.root}>
             <CardActionArea>
                 <CardMedia
@@ -55,7 +56,7 @@ export default function Lessons() {
                 Completed?
                 <Checkbox
                     checked={checked}
-                    onChange={handleChange}
+                    onClick={handleChange}
                     value="primary"
                     inputProps={{ 'aria-label': 'primary checkbox' }}
         />
@@ -85,10 +86,10 @@ export default function Lessons() {
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
-                    Completed
+                    Completed?
                 <Checkbox
                         checked={checked1}
-                        onChange={handleChange1}
+                        onClick={handleChange1}
                         value="primary"
                         inputProps={{ 'aria-label': 'primary checkbox' }}
                     />
@@ -97,6 +98,102 @@ export default function Lessons() {
         </Button>
                 </CardActions>
             </Card>
+
+            <Card className={classes.root}>
+                <CardActionArea>
+                    <CardMedia
+                        className={classes.media}
+                        image="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.upp-prod-eu.s3.amazonaws.com%2Fbd4f2a60-11bb-11ea-a7e6-62bf4f9e548a?fit=scale-down&source=next&width=700"
+                        title="Contemplative Reptile"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                            What is the Stock Market?
+          </Typography>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                            Short answer: A world where companies sell themselves
+          </Typography>
+                    </CardContent>
+                </CardActionArea>
+                <CardActions>
+                    Completed?
+                <Checkbox
+                        checked={checked}
+                        onClick={handleChange}
+                        value="primary"
+                        inputProps={{ 'aria-label': 'primary checkbox' }}
+                    />
+                    <Button size="small" color="primary">
+                        Read more
+        </Button>
+                </CardActions>
+            </Card>
+
+            <br />
+            <br />
+
+            <Card className={classes.root}>
+                <CardActionArea>
+                    <CardMedia
+                        className={classes.media}
+                        image="https://lh3.googleusercontent.com/p0yHCFBHP-7R3DhwK6rpBb_fkhRzSLXddm8l1zqZHchDHHlbl4h8D7VdMgjxH6JoPtBME5u0j1m-OYSmpcFNuUHiZXTvYBAv=s1200"
+                        title="Contemplative Reptile"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                            Why do people buy/sell Stock?
+          </Typography>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                            Short Answer: Purchasing instances of stock for a predermined price.
+          </Typography>
+                    </CardContent>
+                </CardActionArea>
+                <CardActions>
+                    Completed?
+                <Checkbox
+                        checked={checked1}
+                        onClick={handleChange1}
+                        value="primary"
+                        inputProps={{ 'aria-label': 'primary checkbox' }}
+                    />
+                    <Button size="small" color="primary">
+                        Read more
+        </Button>
+                </CardActions>
+            </Card>
+
+            <Card className={classes.root}>
+                <CardActionArea>
+                    <CardMedia
+                        className={classes.media}
+                        image="https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.upp-prod-eu.s3.amazonaws.com%2Fbd4f2a60-11bb-11ea-a7e6-62bf4f9e548a?fit=scale-down&source=next&width=700"
+                        title="Contemplative Reptile"
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                            What is the Stock Market?
+          </Typography>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                            Short answer: A world where companies sell themselves
+          </Typography>
+                    </CardContent>
+                </CardActionArea>
+                <CardActions>
+                    Completed?
+                <Checkbox
+                        checked={checked}
+                        onClick={handleChange}
+                        value="primary"
+                        inputProps={{ 'aria-label': 'primary checkbox' }}
+                    />
+                    <Button size="small" color="primary">
+                        Read more
+        </Button>
+                </CardActions>
+            </Card>
+
+           
+     
 
         </div>
     );

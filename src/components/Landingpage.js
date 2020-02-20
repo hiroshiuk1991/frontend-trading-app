@@ -85,7 +85,7 @@ export default function LandingPage(props) {
                 props.login(data)
                 props.history.push('/')
             })
-            // .catch(error => alert(error))
+            .catch(error => alert(error))
     }
 
 
