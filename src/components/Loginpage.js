@@ -5,55 +5,58 @@ import { Button } from '@material-ui/core'
 import API from '../API'
 
 class Loginpage extends React.Component {
-    state = {
-        nameSignup: '',
-        passwordSignup: ''
-    }
+  state = {
+    nameSignup: '',
+    passwordSignup: ''
+  }
 
+  handleCreateAccount = () => {
+    API.createAccount(this.state.nameSignup, this.state.passwordSignup)
+      .then(data => {
+        if (data.error) throw Error(data.error)
+        this.props.login(data)
 
-    handleCreateAccount = () => {
-        API.createAccount(this.state.nameSignup, this.state.passwordSignup)
-            .then(data => {
+        this.props.history.push('/')
+      })
+      .catch(error => alert(error))
+  }
 
-                if (data.error) throw Error(data.error)
-                this.props.login(data)
+  handleNewAccount = event =>
+    this.setState({ [event.target.name]: event.target.value })
 
-                this.props.history.push('/')
-            })
-            .catch(error => alert(error))
-    }
+  render () {
+    const { nameSignup, passwordSignup } = this.state
+    const { handleCreateAccount, handleNewAccount } = this
+    return (
+      <div className='newUser'>
+        <TextField
+          label='name'
+          value={nameSignup}
+          onChange={handleNewAccount}
+          margin='normal'
+          name='nameSignup'
+        />
+        <br />
+        <TextField
+          label='Password'
+          value={passwordSignup}
+          onChange={handleNewAccount}
+          margin='normal'
+          name='passwordSignup'
+          type='password'
+        />
+        <br />
+        <Button
+          className='btn'
+          onClick={handleCreateAccount}
+          variant='contained'
+          color='primary'
+        >
+          Create
+        </Button>
+      </div>
+    )
+  }
+}
 
-
-     handleNewAccount = event =>
-         this.setState({ [event.target.name]: event.target.value })
-
-render () {
-    const { nameSignup, passwordSignup} = this.state
-    const {  handleCreateAccount, handleNewAccount } = this
-return (
-                        <div>
-                            <TextField
-                                label='name'
-                                value={nameSignup}
-                                onChange={handleNewAccount}
-                                margin='normal'
-                                name='nameSignup'
-                            />
-                            <br />
-                            <TextField
-                                label='Password'
-                                value={passwordSignup}
-                                onChange={handleNewAccount}
-                                margin='normal'
-                                name='passwordSignup'
-                                type='password'
-                            />
-                            <br />
-                            <Button onClick={handleCreateAccount} variant='contained' color='primary'>
-                                Create
-                            </Button>
-                        </div>
-                )}
-            }
-
-export default Loginpage;
+export default Loginpage
