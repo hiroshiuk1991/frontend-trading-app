@@ -7,14 +7,21 @@ class Markets extends React.Component {
       labels: [
         'Feb-19',
         'Mar-19',
-        'Springfield',
-        'Lowell',
-        'Cambridge',
-        'New Bedford'
+        'Apr-19',
+        'May-19',
+        'Jun-19',
+        'Jul-19',
+        'Aug-19',
+        'Sep-19',
+        'Oct-19',
+        'Nov-19',
+        'Dec-19',
+        'Jan-20',
+        'Feb-20'
       ],
       datasets: [
         {
-          label: 'Population',
+          label: 'FTSE100',
           data: [617594, 181045, 153060, 106519, 105162, 95072],
           backgroundColor: ['rgb(217, 6, 6)']
         }

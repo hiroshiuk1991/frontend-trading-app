@@ -42,6 +42,10 @@ export default function Lessons () {
     history.push('/lessonone')
   }
 
+  function handleLessonTwoClick() {
+    history.push('/lessontwo')
+  }
+
   return (
     <div>
       <div className='cardContainer'>
@@ -103,7 +107,7 @@ export default function Lessons () {
               value='primary'
               inputProps={{ 'aria-label': 'primary checkbox' }}
             />
-            <Button size='small' color='primary'>
+            <Button size='small' color='primary' onClick={() => handleLessonTwoClick()}>
               Long Answer
             </Button>
           </CardActions>

@@ -1,8 +1,20 @@
 import React from 'react'
+import { Button } from '@material-ui/core'
+import { useHistory } from 'react-router-dom'
 
-class LessonTwo extends React.Component {
-  render () {
+export default function LessonTwo()  {
+  const history = useHistory()
+
+  function Goback() {
+  history.push('./lessons')
+}
+
     return (
+      <div>
+      <Button onClick={() => Goback()} variant='contained' color='primary'>
+        {' '}
+        Back{' '}
+      </Button>
       <div>
         <h1>Why do people buy/sell Stock?</h1>
         <h4>
@@ -31,8 +43,7 @@ class LessonTwo extends React.Component {
           </p>
         </p>
       </div>
+      </div>
     )
   }
-}
 
-export default LessonTwo

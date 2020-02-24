@@ -3,8 +3,6 @@ import { useHistory } from 'react-router-dom'
 import { Button } from '@material-ui/core'
 
 export default function LessonOne () {
-  // class LessonOne extends React.Component {
-  // render () {
   const history = useHistory()
 
   function Goback () {
