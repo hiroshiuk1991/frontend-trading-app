@@ -21,11 +21,11 @@ import API from '../API'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    maxWidth: 345
+    maxWidth: 345,
   },
   media: {
     height: 0,
-    paddingTop: '56.25%'
+    paddingTop: '90%'
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -91,7 +91,7 @@ export default function InvestorsPage (props) {
         title={props.name}
         subheader='Lets look at your progress'
       />
-      <CardMedia className={classes.media} image='' title='Investor Avatar' />
+      <CardMedia className={classes.media} image='https://www.retailx.com/wp-content/uploads/2019/12/iStock-476085198.jpg' title='Investor Avatar' />
       <CardContent>
         <Typography
           variant='body2'
