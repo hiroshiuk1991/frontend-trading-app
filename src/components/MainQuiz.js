@@ -35,11 +35,16 @@ class MainQuiz extends React.Component {
         score: score + 1
       })
     }
-
     this.setState({
       currentQuestion: this.state.currentQuestion + 1
     })
   }
+
+  postResults = event => {
+    event.preventDefault()
+    API.quizScore(this.state.score, this.props.investorId)
+  }
+
 
   componentDidUpdate (prevProps, prevState) {
     if (this.state.currentQuestion !== prevState.currentQuestion) {
@@ -81,7 +86,7 @@ class MainQuiz extends React.Component {
               ))}
             </ul>
           </p>
-          <Button variant='contained' color='primary'>
+          <Button variant='contained' color='primary' onClick={event => this.postResults(event)}>
             Submit Score
           </Button>
         </div>
