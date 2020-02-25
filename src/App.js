@@ -25,7 +25,9 @@ class App extends React.Component {
     options: [],
     score: 0,
     disabled: true,
-    isEnd: false
+    isEnd: false,
+
+    investorScore: []
   }
 
   login = data => {
@@ -42,7 +44,7 @@ class App extends React.Component {
     this.props.history.push('/')
   }
 
-  componentDidMount () {
+  validateInvestor = () => {
     if (localStorage.token) {
       API.validate()
         .then(data => {
@@ -51,24 +53,19 @@ class App extends React.Component {
           // this.props.history.push('/InvestorsPage')
         })
         .catch(error => alert(error))
-    }
-    else (this.props.history.push('/')) 
+    } else this.props.history.push('/')
+  }
 
-  // this.props.loadQuidData
-}
+  componentDidMount () {
+    this.validateInvestor()
+    this.investorStats()
+  }
 
-  //   if (this.state.name === null) {
-  //     this.props.history.push('/')
-  //   } else if (localStorage.token) {
-  //     API.validate()
-  //       .then(data => {
-  //         if (data.error) throw Error(data.error)
-  //         this.login(data)
-  //         // this.props.history.push('/InvestorsPage')
-  //       })
-  //       .catch(error => alert(error))
-  //   }
-  // }
+  investorStats = () => {
+    fetch('http://localhost:3000/quiz_scores')
+      .then(resp => resp.json())
+      .then(score => this.setState({ investorScore: score }))
+  }
 
   render () {
     return (
@@ -76,22 +73,30 @@ class App extends React.Component {
         <NavBar name={this.state.name} signOut={this.signOut} />
         <div>
           <Switch>
-          {!this.state.investorId &&
-            <Route
-             exact
-              path='/'
-              component={props => (
-                <Landingpage
-                  {...props}
-                  login={this.login}
-                  investor={this.state.investorId}
-                />
-              )}
-            />}
+            {!this.state.investorId && (
+              <Route
+                exact
+                path='/'
+                component={props => (
+                  <Landingpage
+                    {...props}
+                    login={this.login}
+                    investor={this.state.investorId}
+                  />
+                )}
+              />
+            )}
             <Route
               exact
               path='/InvestorsPage'
-              component={props => <InvestorsPage {...props} name={this.state.name} />}
+              component={props => (
+                <InvestorsPage
+                  {...props}
+                  name={this.state.name} 
+                  investorId={this.state.investorId}
+                  investorScore={this.state.investorScore}
+                />
+              )}
             />
             <Route
               exact
@@ -132,10 +137,7 @@ class App extends React.Component {
               exact
               path='/MainQuiz'
               component={props => (
-                <MainQuiz
-                  {...props}
-                  investorId={this.state.investorId}
-                />
+                <MainQuiz {...props} investorId={this.state.investorId} />
               )}
             />
           </Switch>
