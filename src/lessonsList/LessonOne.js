@@ -92,6 +92,4 @@ export default function LessonOne () {
     </div>
   )
 }
-// }
 
-// export default LessonOne

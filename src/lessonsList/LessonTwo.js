@@ -12,8 +12,7 @@ export default function LessonTwo()  {
     return (
       <div>
       <Button onClick={() => Goback()} variant='contained' color='primary'>
-        {' '}
-        Back{' '}
+        Back
       </Button>
       <div>
         <h1>Why do people buy/sell Stock?</h1>

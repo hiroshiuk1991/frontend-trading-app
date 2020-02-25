@@ -16,6 +16,7 @@ import ShareIcon from '@material-ui/icons/Share'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
 import { Button } from '@material-ui/core'
+import { useHistory } from 'react-router-dom'
 import API from '../API'
 
 const useStyles = makeStyles(theme => ({
@@ -43,8 +44,10 @@ const useStyles = makeStyles(theme => ({
 
 export default function InvestorsPage (props) {
   const classes = useStyles()
+  const history = useHistory()
   const [expanded, setExpanded] = React.useState(false)
   const [userScore, setUserScore] = React.useState(null)
+
 
   const handleExpandClick = () => {
     setExpanded(!expanded)
@@ -59,10 +62,17 @@ export default function InvestorsPage (props) {
       score => score.investor_id === props.investorId
     )
     setUserScore(scoreObj.score)
+  
   }
 
   const scoreReset = () => {
-    API.deleteScore()
+    const scoreObject = props.investorScore.find(
+      score => score.investor_id === props.investorId)
+    API.deleteScore(scoreObject.id)
+  }
+
+ function updateProfilePage () {
+    history.push('/UpdateProfile')
   }
 
   return (
@@ -118,7 +128,7 @@ export default function InvestorsPage (props) {
           <Button variant='contained' color='primary' onClick={scoreReset}>
             Reset Score
           </Button>
-          <Button variant='contained' color='secondary'>
+          <Button variant='contained' color='secondary' onClick={updateProfilePage}>
             Update Account
           </Button>
         </CardContent>

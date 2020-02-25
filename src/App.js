@@ -14,6 +14,7 @@ import LessonTwo from './lessonsList/LessonTwo'
 import LessonThree from './lessonsList/LessonThree'
 import LessonFour from './lessonsList/LessonFour'
 import MainQuiz from './components/MainQuiz'
+import UpdateProfile from './components/UpdateProfile'
 
 class App extends React.Component {
   state = {
@@ -66,7 +67,6 @@ class App extends React.Component {
       .then(resp => resp.json())
       .then(score => this.setState({ investorScore: score }))
   }
-  
 
   render () {
     return (
@@ -93,7 +93,7 @@ class App extends React.Component {
               component={props => (
                 <InvestorsPage
                   {...props}
-                  name={this.state.name} 
+                  name={this.state.name}
                   investorId={this.state.investorId}
                   investorScore={this.state.investorScore}
                 />
@@ -139,6 +139,13 @@ class App extends React.Component {
               path='/MainQuiz'
               component={props => (
                 <MainQuiz {...props} investorId={this.state.investorId} />
+              )}
+            />
+            <Route
+              exact
+              path='/UpdateProfile'
+              component={props => (
+                <UpdateProfile {...props}  />
               )}
             />
           </Switch>

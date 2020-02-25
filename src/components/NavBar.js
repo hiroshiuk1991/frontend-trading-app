@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import { Button } from '@material-ui/core'
 import Picture from '../images/stoxLogo.jpg'
 
+
 const NavBar = ({ name, signOut }) => {
   return (
     <div className='navbar'>

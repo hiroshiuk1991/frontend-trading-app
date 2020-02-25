@@ -13,8 +13,7 @@ export default function LessonThree () {
     <div>
       <div>
         <Button onClick={() => Goback()} variant='contained' color='primary'>
-          {' '}
-          Back{' '}
+          Back
         </Button>
       </div>
       <div>
@@ -31,6 +30,10 @@ export default function LessonThree () {
           the market in companies, typical that stock will be appreciating in
           value.
         </p>
+        <h3>Bear Market</h3>
+        <p></p>
+        <h3>Market Cycles</h3>
+        <p></p>
       </div>
     </div>
   )
