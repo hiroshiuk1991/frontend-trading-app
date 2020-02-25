@@ -32,6 +32,15 @@ const quizScore = (score, InvestorId) =>
     score: score,
     investor_id: InvestorId
   })
+
+const deleteScore = id => {
+  fetch(scoreUrl + id, {
+    method: 'DELETE'
+  })
+    .then(res => res.json())
+    .then(res => console.log(res))
+}
+
 const validate = () => get(validateUrl)
 
-export default { login, validate, createAccount, post, quizScore }
+export default { login, validate, createAccount, post, quizScore, deleteScore }

@@ -66,6 +66,7 @@ class App extends React.Component {
       .then(resp => resp.json())
       .then(score => this.setState({ investorScore: score }))
   }
+  
 
   render () {
     return (

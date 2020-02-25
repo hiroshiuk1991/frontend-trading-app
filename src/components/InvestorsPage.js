@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import clsx from 'clsx'
 import Card from '@material-ui/core/Card'
@@ -16,6 +16,7 @@ import ShareIcon from '@material-ui/icons/Share'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
 import { Button } from '@material-ui/core'
+import API from '../API'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -43,16 +44,25 @@ const useStyles = makeStyles(theme => ({
 export default function InvestorsPage (props) {
   const classes = useStyles()
   const [expanded, setExpanded] = React.useState(false)
+  const [userScore, setUserScore] = React.useState(null)
 
   const handleExpandClick = () => {
     setExpanded(!expanded)
   }
 
+  useEffect(() => {
+    !!props.investorScore.length && findTheScore()
+  }, [props.investorScore])
+
   const findTheScore = () => {
     const scoreObj = props.investorScore.find(
       score => score.investor_id === props.investorId
     )
-    return scoreObj.score
+    setUserScore(scoreObj.score)
+  }
+
+  const scoreReset = () => {
+    API.deleteScore()
   }
 
   return (
@@ -69,7 +79,7 @@ export default function InvestorsPage (props) {
           </IconButton>
         }
         title={props.name}
-        subheader='Need to input overall score/level'
+        subheader='Lets look at your progress'
       />
       <CardMedia className={classes.media} image='' title='Investor Avatar' />
       <CardContent>
@@ -102,16 +112,17 @@ export default function InvestorsPage (props) {
           <Typography paragraph></Typography>
           {props.investorScore && (
             <Typography paragraph>
-              {props.name}'s score {findTheScore()} / 7
+              {props.name}'s score {userScore} / 7
             </Typography>
           )}
-          <Button variant='contained' color='primary'>
+          <Button variant='contained' color='primary' onClick={scoreReset}>
             Reset Score
           </Button>
-      <Button variant='contained' color='secondary'> Update Account </Button>
+          <Button variant='contained' color='secondary'>
+            Update Account
+          </Button>
         </CardContent>
       </Collapse>
     </Card>
   )
 }
-// export default InvestorsPage;
