@@ -39,6 +39,7 @@ class App extends React.Component {
   signOut = () => {
     this.setState({ name: null })
     localStorage.removeItem('token')
+    this.props.history.push('/')
   }
 
   componentDidMount () {
@@ -77,7 +78,7 @@ class App extends React.Component {
           <Switch>
           {!this.state.investorId &&
             <Route
-              exact
+             exact
               path='/'
               component={props => (
                 <Landingpage
@@ -133,13 +134,7 @@ class App extends React.Component {
               component={props => (
                 <MainQuiz
                   {...props}
-                  // currentQuestion={this.state.currentQuestion}
-                  // myAnswer={this.state.myAnswer}
-                  // options={this.state.options}
-                  // score={this.state.score}
-                  // disabled={this.state.disabled}
-                  // isEnd={this.state.isEnd}
-                  // loadQuizData={this.props.loadQuizData}
+                  investorId={this.state.investorId}
                 />
               )}
             />

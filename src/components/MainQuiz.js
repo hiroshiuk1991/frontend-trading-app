@@ -1,5 +1,7 @@
 import React from 'react'
 import { quizData } from './QuizData'
+import { Button } from '@material-ui/core'
+import API from '../API'
 
 class MainQuiz extends React.Component {
   state = {
@@ -68,7 +70,7 @@ class MainQuiz extends React.Component {
     if (isEnd) {
       return (
         <div className='result'>
-          <h3>Game Over your Final score is {this.state.score} points </h3>
+          <h3>Game Over: Your Final score is {this.state.score} points </h3>
           <p>
             The correct answer's for the questions was
             <ul>
@@ -79,14 +81,16 @@ class MainQuiz extends React.Component {
               ))}
             </ul>
           </p>
+          <Button variant='contained' color='primary'>
+            Submit Score
+          </Button>
         </div>
       )
     } else {
       return (
         <div className='quiz'>
           <h1>{this.state.questions} </h1>
-          <span>{`Questions ${currentQuestion}  out of ${quizData.length -
-            1} remaining `}</span>
+          <span>{`Questions ${currentQuestion}  out of ${quizData.length} remaining `}</span>
           {options.map(option => (
             <p
               key={option.id}
@@ -99,19 +103,25 @@ class MainQuiz extends React.Component {
             </p>
           ))}
           {currentQuestion < quizData.length - 1 && (
-            <button
+            <Button
               className='ui inverted button'
+              variant='contained'
+              color='primary'
               disabled={this.state.disabled}
               onClick={this.nextQuestionHandler}
             >
               Next
-            </button>
+            </Button>
           )}
-          {/* //need to add a finish button */}
           {currentQuestion === quizData.length - 1 && (
-            <button className='ui inverted button' onClick={this.finishHandler}>
+            <Button
+              className='ui inverted button'
+              variant='contained'
+              color='primary'
+              onClick={this.finishHandler}
+            >
               Finish
-            </button>
+            </Button>
           )}
         </div>
       )
@@ -119,6 +129,4 @@ class MainQuiz extends React.Component {
   }
 }
 
-export default MainQuiz;
-
-
+export default MainQuiz

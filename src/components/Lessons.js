@@ -46,6 +46,14 @@ export default function Lessons () {
     history.push('/lessontwo')
   }
 
+  function handleLessonThreeClick() {
+    history.push('/lessonthree')
+  }
+
+  function handleLessonFourClick() {
+    history.push('/lessonfour')
+  }
+
   return (
     <div>
       <div className='cardContainer'>
@@ -137,7 +145,7 @@ export default function Lessons () {
               value='primary'
               inputProps={{ 'aria-label': 'primary checkbox' }}
             />
-            <Button size='small' color='primary'>
+            <Button size='small' color='primary' onClick={() => handleLessonThreeClick()}>
               Long Answer
             </Button>
           </CardActions>
@@ -170,7 +178,7 @@ export default function Lessons () {
               value='primary'
               inputProps={{ 'aria-label': 'primary checkbox' }}
             />
-            <Button size='small' color='primary'>
+            <Button size='small' color='primary' onClick={() => handleLessonFourClick()}>
               Long Answer
             </Button>
           </CardActions>

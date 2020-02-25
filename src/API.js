@@ -2,6 +2,7 @@ const BASEURL = 'http://localhost:3000'
 const loginUrl = BASEURL + '/login'
 const validateUrl = BASEURL + '/validate'
 const investorUrl = BASEURL + '/investors'
+const scoreUrl = BASEURL + '/quizscore'
 
 const get = url =>
     fetch(url, {
@@ -33,6 +34,15 @@ const createAccount = (name, password) => post(investorUrl,
             password: password}
     })
 
+
+const quizScore = (InvestorId, score) => post(scoreUrl,
+    { quizscore:
+        {score: score,
+            investor_id: InvestorId
+        }
+    }  )
+
+
 const validate = () => get(validateUrl)
 
-export default { login, validate, createAccount, post }
+export default { login, validate, createAccount, post, quizScore }
