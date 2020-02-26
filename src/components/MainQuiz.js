@@ -2,6 +2,7 @@ import React from 'react'
 import { quizData } from './QuizData'
 import { Button } from '@material-ui/core'
 import API from '../API'
+import QuizOption from './QuizOption'
 
 class MainQuiz extends React.Component {
   state = {
@@ -10,7 +11,9 @@ class MainQuiz extends React.Component {
     options: [],
     score: 0,
     disabled: true,
-    isEnd: false
+    isEnd: false,
+
+    finalScore: 0
   }
 
   loadQuizData = () => {
@@ -45,7 +48,6 @@ class MainQuiz extends React.Component {
     API.quizScore(this.state.score, this.props.investorId)
   }
 
-
   componentDidUpdate (prevProps, prevState) {
     if (this.state.currentQuestion !== prevState.currentQuestion) {
       this.setState(() => {
@@ -70,14 +72,14 @@ class MainQuiz extends React.Component {
     }
   }
   render () {
-    const { options, myAnswer, currentQuestion, isEnd } = this.state
+    const { options, currentQuestion, isEnd } = this.state
 
     if (isEnd) {
       return (
         <div className='result'>
           <h3>Game Over: Your Final score is {this.state.score} points </h3>
           <p>
-            The correct answer's for the questions was
+            The correct answer's for the questions are:
             <ul>
               {quizData.map((item, index) => (
                 <li className='ui floating message options' key={index}>
@@ -86,7 +88,11 @@ class MainQuiz extends React.Component {
               ))}
             </ul>
           </p>
-          <Button variant='contained' color='primary' onClick={event => this.postResults(event)}>
+          <Button
+            variant='contained'
+            color='primary'
+            onClick={event => this.postResults(event)}
+          >
             Submit Score
           </Button>
         </div>
@@ -97,15 +103,12 @@ class MainQuiz extends React.Component {
           <h1>{this.state.questions} </h1>
           <span>{`Questions ${currentQuestion}  out of ${quizData.length} remaining `}</span>
           {options.map(option => (
-            <p
-              key={option.id}
-              className={`ui floating message options
-         ${myAnswer === option ? 'selected' : null}
-         `}
-              onClick={() => this.checkAnswer(option)}
-            >
-              {option}
-            </p>
+            <QuizOption
+              option={option}
+              key={option}
+              checkAnswer={this.checkAnswer}
+              myAnswer={this.myAnswer}
+            />
           ))}
           {currentQuestion < quizData.length - 1 && (
             <Button

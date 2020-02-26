@@ -12,19 +12,34 @@ const NavBar = ({ name, signOut }) => {
       </div>
       {name ? (
         <div className='navdiv'>
-          <NavLink to='/' exact className='link'>
+          <NavLink to='/' exact className='link' activeStyle={{
+            fontWeight: "bold",
+            color: "blue"
+          }}>
             Homepage
           </NavLink>
-          <NavLink to='/investorspage' exact className='link'>
+          <NavLink to='/investorspage' exact className='link' activeStyle={{
+            fontWeight: "bold",
+            color: "blue"
+          }}>
             {name}'s page
           </NavLink>
-          <NavLink to='/Lessons' exact className='link'>
+          <NavLink to='/Lessons' exact className='link' activeStyle={{
+            fontWeight: "bold",
+            color: "blue"
+          }}>
             Lessons
           </NavLink>
-          <NavLink to='/Markets' exact className='link'>
+          <NavLink to='/Markets' exact className='link' activeStyle={{
+            fontWeight: "bold",
+            color: "blue"
+          }}>
             Markets
           </NavLink>
-          <NavLink to='/mainquiz' exact className='link'>
+          <NavLink to='/mainquiz' exact className='link' activeStyle={{
+            fontWeight: "bold",
+            color: "blue"
+          }}>
             Quiz
           </NavLink>
           <h3 className='welcome'> {`Welcome Back ${name}`} </h3>

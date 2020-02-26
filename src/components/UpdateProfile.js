@@ -7,7 +7,7 @@ import API from '../API'
 class UpdateProfile extends React.Component {
     state = {
         newName: '',
-        newPassword: ''
+        newPassword: '',
     }
 
     handleUpdateAccount = () => {

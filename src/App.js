@@ -31,10 +31,19 @@ class App extends React.Component {
     investorScore: []
   }
 
+  updateInvestorScore = (targetInvestorScore) => {
+    const investorScore = this.state.investorScore.map(investorScore =>
+      targetInvestorScore.id === investorScore.id
+        ? targetInvestorScore
+        : investorScore
+    )
+    this.setState({ investorScore })
+  }
+
   login = data => {
     this.setState({
-      name: data.investor_name,
-      investorId: data.investor_id
+      name: data.name,
+      investorId: data.investorId
     })
     localStorage.token = data.token
   }
@@ -51,7 +60,7 @@ class App extends React.Component {
         .then(data => {
           if (data.error) throw Error(data.error)
           this.login(data)
-          // this.props.history.push('/InvestorsPage')
+          this.props.history.push('/InvestorsPage')
         })
         .catch(error => alert(error))
     } else this.props.history.push('/')
@@ -87,6 +96,7 @@ class App extends React.Component {
                 )}
               />
             )}
+            {/* {!this.state.investorScore && ( */}
             <Route
               exact
               path='/InvestorsPage'
@@ -96,9 +106,11 @@ class App extends React.Component {
                   name={this.state.name}
                   investorId={this.state.investorId}
                   investorScore={this.state.investorScore}
+                  updateInvestorScore={this.updateInvestorScore}
                 />
               )}
             />
+            {/* )} */}
             <Route
               exact
               path='/Markets'
@@ -145,7 +157,7 @@ class App extends React.Component {
               exact
               path='/UpdateProfile'
               component={props => (
-                <UpdateProfile {...props}  />
+                <UpdateProfile {...props} investorId={this.state.investorId} />
               )}
             />
           </Switch>

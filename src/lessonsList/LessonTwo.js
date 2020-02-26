@@ -1,13 +1,21 @@
 import React from 'react'
 import { Button } from '@material-ui/core'
 import { useHistory } from 'react-router-dom'
+import CardActions from '@material-ui/core/CardActions'
+import Checkbox from '@material-ui/core/Checkbox'
 
 export default function LessonTwo()  {
   const history = useHistory()
+  const [checked, setChecked] = React.useState(false)
+
 
   function Goback() {
   history.push('./lessons')
 }
+
+  const handleChange = event => {
+    setChecked(event.target.checked)
+  }
 
     return (
       <div>
@@ -42,6 +50,15 @@ export default function LessonTwo()  {
           </p>
         </p>
       </div>
+        <CardActions>
+          Lesson Completed?
+            <Checkbox
+            checked={checked}
+            onClick={handleChange}
+            value='primary'
+            inputProps={{ 'aria-label': 'primary checkbox' }}
+          />
+        </CardActions>
       </div>
     )
   }
