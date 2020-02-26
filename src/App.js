@@ -31,7 +31,7 @@ class App extends React.Component {
     investorScore: []
   }
 
-  updateInvestorScore = (targetInvestorScore) => {
+  updateInvestorScore = targetInvestorScore => {
     const investorScore = this.state.investorScore.map(investorScore =>
       targetInvestorScore.id === investorScore.id
         ? targetInvestorScore
@@ -124,7 +124,13 @@ class App extends React.Component {
             <Route
               exact
               path='/LoginPage'
-              component={props => <Loginpage {...props} login={this.login} />}
+              component={props => (
+                <Loginpage
+                  {...props}
+                  login={this.login}
+                  investorId={this.state.investorId}
+                />
+              )}
             />
             <Route
               exact

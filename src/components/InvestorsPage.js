@@ -73,6 +73,7 @@ export default function InvestorsPage (props) {
     //   score => score.investor_id === props.investorId
     // )
     API.resetScore(scoreObj.id)
+    .then(() => props.updateInvestorScore())
     // setUserScore(0)
     // API.quizScore(scoreObj.score, props.investorId)
   }

@@ -19,6 +19,8 @@ class Loginpage extends React.Component {
         this.props.history.push('/')
       })
       .catch(error => alert(error))
+
+      // API.createScore(this.props.investorId)
   }
 
   handleNewAccount = event =>
