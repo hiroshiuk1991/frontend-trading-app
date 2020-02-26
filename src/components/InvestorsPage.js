@@ -18,6 +18,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert'
 import { Button } from '@material-ui/core'
 // import { useHistory } from 'react-router-dom'
 import API from '../API'
+import NoScoreInvestor from './NoScoreInvestor'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -78,11 +79,12 @@ export default function InvestorsPage (props) {
     // API.quizScore(scoreObj.score, props.investorId)
   }
 
-  // function updateProfilePage () {
-  //   history.push('/UpdateProfile')
-  // }
+ const deleteInvestor = () => {
+    API.deleteInvestor(props.investorId)
+      .then(localStorage.removeItem('token'))
+  }
 
-  if (scoreObj === undefined) return <h1>Loading...</h1>
+  if (scoreObj === undefined) return <NoScoreInvestor />
 
   return (
     <div className='profile'>
@@ -145,7 +147,7 @@ export default function InvestorsPage (props) {
             <Button
               variant='contained'
               color='secondary'
-              // onClick={updateProfilePage}
+              onClick={deleteInvestor}
             >
               Delete Account
               {/* Update Account */}

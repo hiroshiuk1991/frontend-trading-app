@@ -15,8 +15,7 @@ class Loginpage extends React.Component {
       .then(data => {
         if (data.error) throw Error(data.error)
         this.props.login(data)
-
-        this.props.history.push('/')
+        this.props.history.push('/InvestorPage')
       })
       .catch(error => alert(error))
 

@@ -33,14 +33,14 @@ const quizScore = (score, InvestorId) =>
     investor_id: InvestorId
   })
 
-const createScore = (InvestorId) => 
-post(scoreUrl, {
-  score: 0,
-  investor_id: InvestorId
-})
+const createScore = InvestorId =>
+  post(scoreUrl, {
+    score: 0,
+    investor_id: InvestorId
+  })
 
 const resetScore = (id, data) => {
-  return fetch('http://localhost:3000/quiz_scores/' + id, {
+  return fetch(`http://localhost:3000/quiz_scores/${id}`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
@@ -50,6 +50,11 @@ const resetScore = (id, data) => {
   }).then(resp => resp.json())
 }
 
+const deleteInvestor = id => {
+  return fetch(`http://localhost:3000/quiz_scores/${id}`, {
+    method: 'DELETE'
+  })
+}
 
 const patch = (id, data) =>
   fetch(investorUrl + id, {
@@ -66,4 +71,14 @@ const updateAccount = (name, password) =>
 
 const validate = () => get(validateUrl)
 
-export default { login, validate, createAccount, post, quizScore, resetScore, updateAccount, createScore }
+export default {
+  login,
+  validate,
+  createAccount,
+  post,
+  quizScore,
+  resetScore,
+  updateAccount,
+  createScore,
+  deleteInvestor
+}
