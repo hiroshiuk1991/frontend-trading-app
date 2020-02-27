@@ -16,6 +16,7 @@ import LessonFour from './lessonsList/LessonFour'
 import MainQuiz from './components/MainQuiz'
 import UpdateProfile from './components/UpdateProfile'
 import Welcome from './components/Welcome'
+import QuizList from './components/QuizList'
 
 class App extends React.Component {
   state = {
@@ -182,6 +183,13 @@ class App extends React.Component {
               path='/UpdateProfile'
               component={props => (
                 <UpdateProfile {...props} investorId={this.state.investorId} />
+              )}
+            />
+            <Route
+              exact
+              path='/QuizList'
+              component={props => (
+                <QuizList {...props}  />
               )}
             />
           </Switch>

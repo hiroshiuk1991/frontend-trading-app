@@ -101,7 +101,8 @@ ul {
 }
 
 .applestock {
-  height: 400px;
+  height: 250px;
+  width: 300px;
 }
 
 .navbar {
@@ -130,5 +131,22 @@ background-image: '../src/images/LSE.png';
 }
 
 .lessons {
-  margin-left: 300px;
+ margin-left: 300px;
 }
+
+
+.stxBtn {
+ margin-left: 300px;
+}
+
+.fontBox {
+  font-size: calc(10px + 2vmin);
+}
+
+/* .position1 {
+
+}
+
+.position2 {
+
+} */

@@ -36,7 +36,7 @@ const NavBar = ({ name, signOut }) => {
           }}>
             Markets
           </NavLink>
-          <NavLink to='/mainquiz' exact className='link' activeStyle={{
+          <NavLink to='/quizlist' exact className='link' activeStyle={{
             fontWeight: "bold",
             color: "blue"
           }}>

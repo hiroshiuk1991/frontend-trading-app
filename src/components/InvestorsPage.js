@@ -18,7 +18,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert'
 import { Button } from '@material-ui/core'
 import { useHistory } from 'react-router-dom'
 import API from '../API'
-import NoScoreInvestor from './NoScoreInvestor'
+
 
 const useStyles = makeStyles(theme => ({
   root: {

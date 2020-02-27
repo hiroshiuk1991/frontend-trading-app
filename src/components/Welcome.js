@@ -5,16 +5,12 @@ import { Button } from '@material-ui/core'
 
 export default function Welcome () {
 
-// landingPage = event => {
-//   history.push('')
-// }  
-
   return (
     <div>
       <h1>Welome to STOX </h1>
       <h2>
         The E-Learning Website, dedicated to teach the basics of the Financial
-        Markets
+        Markets.
       </h2>
 
       <Button
@@ -25,5 +21,8 @@ export default function Welcome () {
         Lets Login In
       </Button>
     </div>
+
+
+
   )
 }
