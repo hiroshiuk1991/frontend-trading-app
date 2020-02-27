@@ -41,13 +41,8 @@ const createScore = InvestorId =>
 
 const resetScore = (id, data) => {
   return fetch(`http://localhost:3000/quiz_scores/${id}`, {
-    method: 'PATCH',
-    headers: {
-      'Content-Type': 'application/json',
-      Accepts: 'application/json'
-    },
-    body: JSON.stringify(data)
-  }).then(resp => resp.json())
+    method: 'DELETE'
+}).then(resp => resp.json())
 }
 
 const deleteInvestor = id => {

@@ -53,23 +53,21 @@ export default function InvestorsPage (props) {
     setExpanded(!expanded)
   }
 
-  const scoreObj = props.investorScore.find(
-    score => score.investor_id === props.investorId
-  )
+  const {scoreObj} = props;
 
   const scoreReset = () => {
-    API.resetScore(scoreObj.id)
-    .then(() => props.updateInvestorScore())
+    API.resetScore(scoreObj.id).then(() =>
+      props.removeInvestorScore(scoreObj.id)
+    )
   }
 
- const deleteInvestor = () => {
-   return API.deleteInvestor(props.investorId)
+  const deleteInvestor = () => {
+    return API.deleteInvestor(props.investorId)
       .then(localStorage.removeItem('token'))
       .then(alert('Investor Deleted'))
-      .then(history.push('/loginpage'))
+      .then(history.push('/landingpage'))
+    // .then(props.investorStateReset)
   }
-
-  if (scoreObj === undefined) return <NoScoreInvestor deleteInvestor={deleteInvestor}/>
 
   return (
     <div className='profile'>
@@ -107,38 +105,42 @@ export default function InvestorsPage (props) {
           <IconButton aria-label='share'>
             <ShareIcon />
           </IconButton>
-          <IconButton
-            className={clsx(classes.expand, {
-              [classes.expandOpen]: expanded
-            })}
-            onClick={handleExpandClick}
-            aria-expanded={expanded}
-            aria-label='show more'
-          >
-            <ExpandMoreIcon />
-          </IconButton>
+          {scoreObj && (
+            <IconButton
+              className={clsx(classes.expand, {
+                [classes.expandOpen]: expanded
+              })}
+              onClick={handleExpandClick}
+              aria-expanded={expanded}
+              aria-label='show more'
+            >
+              <ExpandMoreIcon />
+            </IconButton>
+          )}
         </CardActions>
-        <Collapse in={expanded} timeout='auto' unmountOnExit>
-          <CardContent>
-            <Typography paragraph></Typography>
-            {props.investorScore && (
+        {scoreObj && (
+          <Collapse in={expanded} timeout='auto' unmountOnExit>
+            <CardContent>
+              <Typography paragraph></Typography>
+
               <Typography paragraph>
                 {props.name}'s score {scoreObj.score} / 7
               </Typography>
-            )}
-            <Button variant='contained' color='primary' onClick={scoreReset}>
-              Reset Score
-            </Button>
-            <Button
-              variant='contained'
-              color='secondary'
-              onClick={deleteInvestor}
-            >
-              Delete Account
-              {/* Update Account */}
-            </Button>
-          </CardContent>
-        </Collapse>
+
+              <Button variant='contained' color='primary' onClick={scoreReset}>
+                Reset Score
+              </Button>
+              <Button
+                variant='contained'
+                color='secondary'
+                onClick={deleteInvestor}
+              >
+                Delete Account
+                {/* Update Account */}
+              </Button>
+            </CardContent>
+          </Collapse>
+        )}
       </Card>
     </div>
   )

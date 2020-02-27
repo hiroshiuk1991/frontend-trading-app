@@ -80,10 +80,9 @@ export default function LandingPage (props) {
       .then(data => {
         if (data.error) throw Error(data.error)
         props.login(data)
-        props.history.push('/')
       })
       .catch(error => alert(error))
-  }
+    }
   
    return (
     <Grid container component='main' className={classes.root}>

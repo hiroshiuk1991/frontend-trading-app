@@ -42,8 +42,7 @@ const NavBar = ({ name, signOut }) => {
           }}>
             Quiz
           </NavLink>
-          <h3 className='welcome'> {`Welcome Back ${name}`} </h3>
-          {/* {name && ( */}
+          <h3 className='welcome'> {`Welcome ${name}`} </h3>
           <Button onClick={signOut} variant='contained' color='primary'>
             SIGN OUT
           </Button>

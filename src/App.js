@@ -15,6 +15,7 @@ import LessonThree from './lessonsList/LessonThree'
 import LessonFour from './lessonsList/LessonFour'
 import MainQuiz from './components/MainQuiz'
 import UpdateProfile from './components/UpdateProfile'
+import Welcome from './components/Welcome'
 
 class App extends React.Component {
   state = {
@@ -31,21 +32,26 @@ class App extends React.Component {
     investorScore: []
   }
 
-  updateInvestorScore = targetInvestorScore => {
-    const investorScore = this.state.investorScore.map(investorScore =>
-      targetInvestorScore.id === investorScore.id
-        ? targetInvestorScore
-        : investorScore
+  removeInvestorScore = targetInvestorScoreId => {
+    const investorScore = this.state.investorScore.filter(investorScore =>
+      targetInvestorScoreId !== investorScore.id
     )
     this.setState({ investorScore })
   }
 
+  addInvestorScore = newScore => {
+    this.setState({
+      investorScore: [...this.state.investorScore, newScore]
+    })
+  }
+
   login = data => {
     this.setState({
-      name: data.name,
-      investorId: data.investorId
+      name: data.investor_name,
+      investorId: data.investor_id
     })
     localStorage.token = data.token
+    this.props.history.push('/InvestorsPage')
   }
 
   signOut = () => {
@@ -54,13 +60,17 @@ class App extends React.Component {
     this.props.history.push('/')
   }
 
+  investorStateReset = () => {
+    this.setState({ investorId: null, name: null})
+  }
+
   validateInvestor = () => {
     if (localStorage.token) {
       API.validate()
         .then(data => {
           if (data.error) throw Error(data.error)
           this.login(data)
-          this.props.history.push('/InvestorsPage')
+          this.props.history.push('/')
         })
         .catch(error => alert(error))
     } else this.props.history.push('/')
@@ -83,8 +93,18 @@ class App extends React.Component {
         <NavBar name={this.state.name} signOut={this.signOut} />
         <div>
           <Switch>
-            {!this.state.investorId && (
+            {this.state.investorId ? (
               <Route
+                exact
+                path='/'
+                component={props => (
+                  <Welcome
+                    {...props}
+                  />
+                )}
+              />   
+            ) : ( 
+           <Route
                 exact
                 path='/'
                 component={props => (
@@ -94,9 +114,7 @@ class App extends React.Component {
                     investor={this.state.investorId}
                   />
                 )}
-              />
-            )}
-            {/* {!this.state.investorScore && ( */}
+              />)}
             <Route
               exact
               path='/InvestorsPage'
@@ -105,12 +123,12 @@ class App extends React.Component {
                   {...props}
                   name={this.state.name}
                   investorId={this.state.investorId}
-                  investorScore={this.state.investorScore}
-                  updateInvestorScore={this.updateInvestorScore}
+                  investorStateReset={this.investorStateReset}
+                  scoreObj={this.state.investorScore.find(score => score.investor_id === this.state.investorId)}
+                  removeInvestorScore={this.removeInvestorScore}
                 />
               )}
             />
-            {/* )} */}
             <Route
               exact
               path='/Markets'
@@ -156,7 +174,7 @@ class App extends React.Component {
               exact
               path='/MainQuiz'
               component={props => (
-                <MainQuiz {...props} investorId={this.state.investorId} />
+                <MainQuiz {...props} investorId={this.state.investorId} addInvestorScore={this.addInvestorScore}/>
               )}
             />
             <Route

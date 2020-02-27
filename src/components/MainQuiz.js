@@ -2,7 +2,7 @@ import React from 'react'
 import { quizData } from './QuizData'
 import { Button } from '@material-ui/core'
 import API from '../API'
-import QuizOption from './QuizOption'
+// import QuizOption from './QuizOption'
 
 class MainQuiz extends React.Component {
   state = {
@@ -45,9 +45,11 @@ class MainQuiz extends React.Component {
 
   postResults = event => {
     event.preventDefault()
-    API.quizScore(this.state.score, this.props.investorId)
-    .then(alert('Score Saved!'))
-    .then(this.props.history.push('/'))
+    API.quizScore(this.state.score, this.props.investorId).then(score => {
+      this.props.addInvestorScore(score)
+      alert('Score Saved!')
+      this.props.history.push('/')
+    })
   }
 
   componentDidUpdate (prevProps, prevState) {
@@ -105,12 +107,20 @@ class MainQuiz extends React.Component {
           <h1>{this.state.questions} </h1>
           <span>{`Questions ${currentQuestion}  out of ${quizData.length} remaining `}</span>
           {options.map(option => (
-            <QuizOption
-              option={option}
-              key={option}
-              checkAnswer={this.checkAnswer}
-              myAnswer={this.myAnswer}
-            />
+            <p
+              className={`ui floating message options
+         ${this.state.myAnswer === option ? 'selected' : null}
+         `}
+              onClick={() => this.checkAnswer(option)}
+            >
+              {option}
+            </p>
+            // <QuizOption
+            //   option={option}
+            //   key={option}
+            //   checkAnswer={this.checkAnswer}
+            //   myAnswer={this.myAnswer}
+            // />
           ))}
           {currentQuestion < quizData.length - 1 && (
             <Button
@@ -139,4 +149,4 @@ class MainQuiz extends React.Component {
   }
 }
 
-export default MainQuiz;
+export default MainQuiz
