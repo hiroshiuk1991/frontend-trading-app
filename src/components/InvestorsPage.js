@@ -16,7 +16,7 @@ import ShareIcon from '@material-ui/icons/Share'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
 import { Button } from '@material-ui/core'
-// import { useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import API from '../API'
 import NoScoreInvestor from './NoScoreInvestor'
 
@@ -45,7 +45,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function InvestorsPage (props) {
   const classes = useStyles()
-  // const history = useHistory()
+  const history = useHistory()
   const [expanded, setExpanded] = React.useState(false)
   // const [userScore, setUserScore] = React.useState(0)
 
@@ -53,38 +53,23 @@ export default function InvestorsPage (props) {
     setExpanded(!expanded)
   }
 
-  // useEffect(() => {
-  //   !!props.investorScore.length && findTheScore()
-  // }, [props.investorScore])
-
-  // const findTheScore = () => {
-  //   const scoreObj = props.investorScore.find(
-  //     score => score.investor_id === props.investorId
-  //   )
-  //   setUserScore(scoreObj.score)
-
-  // }
-
   const scoreObj = props.investorScore.find(
     score => score.investor_id === props.investorId
   )
 
   const scoreReset = () => {
-    // const scoreObject = props.investorScore.find(
-    //   score => score.investor_id === props.investorId
-    // )
     API.resetScore(scoreObj.id)
     .then(() => props.updateInvestorScore())
-    // setUserScore(0)
-    // API.quizScore(scoreObj.score, props.investorId)
   }
 
  const deleteInvestor = () => {
-    API.deleteInvestor(props.investorId)
+   return API.deleteInvestor(props.investorId)
       .then(localStorage.removeItem('token'))
+      .then(alert('Investor Deleted'))
+      .then(history.push('/loginpage'))
   }
 
-  if (scoreObj === undefined) return <NoScoreInvestor />
+  if (scoreObj === undefined) return <NoScoreInvestor deleteInvestor={deleteInvestor}/>
 
   return (
     <div className='profile'>

@@ -37,6 +37,8 @@ const useStyles = makeStyles(theme => ({
 }))
 
 
+
+
 export default function NoScoreInvestor(props) {
     const classes = useStyles()
 

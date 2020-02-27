@@ -51,7 +51,7 @@ const resetScore = (id, data) => {
 }
 
 const deleteInvestor = id => {
-  return fetch(`http://localhost:3000/quiz_scores/${id}`, {
+  return fetch(`http://localhost:3000/investors/${id}`, {
     method: 'DELETE'
   })
 }

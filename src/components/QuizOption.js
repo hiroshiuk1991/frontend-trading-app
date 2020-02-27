@@ -1,17 +1,18 @@
 import React from 'react'
 
-class QuizOption extends React.Component {
-  render () {
+export default function QuizOption (props) {
+// class QuizOption extends React.Component {
+//   render () {
     return (
       <p
         className={`ui floating message options
-         ${this.props.myAnswer === this.props.option ? 'selected' : null}
+         ${props.myAnswer === props.option ? 'selected' : null}
          `}
-        onClick={() => this.props.checkAnswer(this.props.option)}
+        onClick={() => props.checkAnswer(props.option)}
       >
-        {this.props.option}
+        {props.option}
       </p>
     )
   }
-}
-export default QuizOption
+// }
+// export default QuizOption

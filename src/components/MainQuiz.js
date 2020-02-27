@@ -46,6 +46,8 @@ class MainQuiz extends React.Component {
   postResults = event => {
     event.preventDefault()
     API.quizScore(this.state.score, this.props.investorId)
+    .then(alert('Score Saved!'))
+    .then(this.props.history.push('/'))
   }
 
   componentDidUpdate (prevProps, prevState) {
@@ -137,4 +139,4 @@ class MainQuiz extends React.Component {
   }
 }
 
-export default MainQuiz
+export default MainQuiz;
