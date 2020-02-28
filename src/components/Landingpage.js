@@ -80,11 +80,12 @@ export default function LandingPage (props) {
       .then(data => {
         if (data.error) throw Error(data.error)
         props.login(data)
+        props.history.push('/InvestorsPage')
       })
       .catch(error => alert(error))
-    }
-  
-   return (
+  }
+
+  return (
     <Grid container component='main' className={classes.root}>
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
@@ -139,9 +140,7 @@ export default function LandingPage (props) {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href='#' variant='body2'>
-                
-                </Link>
+                <Link href='#' variant='body2'></Link>
               </Grid>
               <Grid item>
                 <Link onClick={handleClick} href='#' variant='body2'>
@@ -155,5 +154,6 @@ export default function LandingPage (props) {
           </form>
         </div>
       </Grid>
-    </Grid>)
+    </Grid>
+  )
 }

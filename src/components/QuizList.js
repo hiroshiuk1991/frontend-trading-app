@@ -46,7 +46,7 @@ export default function QuizList () {
           <CardActionArea>
             <CardMedia
               className={classes.media}
-              image='https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.upp-prod-eu.s3.amazonaws.com%2Fbd4f2a60-11bb-11ea-a7e6-62bf4f9e548a?fit=scale-down&source=next&width=700'
+              image='https://images.readwrite.com/wp-content/uploads/2019/08/Why-You-Love-Online-Quizzes-825x500.jpg'
               title='x'
             />
             <CardContent>
@@ -97,7 +97,7 @@ export default function QuizList () {
             <Button
               size='small'
               color='primary'
-            //   onClick={() => handleLessonTwoClick()}
+              //   onClick={() => handleLessonTwoClick()}
             >
               Long Answer
             </Button>
@@ -131,7 +131,7 @@ export default function QuizList () {
             <Button
               size='small'
               color='primary'
-            //   onClick={() => handleLessonThreeClick()}
+              //   onClick={() => handleLessonThreeClick()}
             >
               Long Answer
             </Button>
@@ -168,7 +168,7 @@ export default function QuizList () {
             <Button
               size='small'
               color='primary'
-            //   onClick={() => handleLessonFourClick()}
+              //   onClick={() => handleLessonFourClick()}
             >
               Long Answer
             </Button>

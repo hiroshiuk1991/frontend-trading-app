@@ -48,11 +48,10 @@ class App extends React.Component {
 
   login = data => {
     this.setState({
-      name: data.investor_name,
-      investorId: data.investor_id
+      name: data.name,
+      investorId: data.investorId
     })
     localStorage.token = data.token
-    this.props.history.push('/InvestorsPage')
   }
 
   signOut = () => {
@@ -71,7 +70,6 @@ class App extends React.Component {
         .then(data => {
           if (data.error) throw Error(data.error)
           this.login(data)
-          this.props.history.push('/')
         })
         .catch(error => alert(error))
     } else this.props.history.push('/')
