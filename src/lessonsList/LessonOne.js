@@ -19,17 +19,17 @@ export default function LessonOne () {
   }
 
   return (
-    <div>
+    <div className='stxbtn'>
       <div>
-        <Button onClick={() => Goback()} variant='contained' color='primary'>
+        <Button className='stxbtn' onClick={() => Goback()} variant='contained' color='primary'>
           Back
         </Button>
       </div>
-      <div className='position1'>
+      <div >
         <InfoOne />
       </div>
       <div>
-        <InfoTwo className='position2' />
+        <InfoTwo />
       </div>
       <CardActions>
         Lesson Completed?

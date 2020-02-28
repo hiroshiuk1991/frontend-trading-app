@@ -94,7 +94,7 @@ class App extends React.Component {
         <NavBar name={this.state.name} signOut={this.signOut} />
         <div>
           <Switch>
-            {this.state.investorId ? (
+            {/* {this.state.investorId ? ( */}
               <Route
                 exact
                 path='/'
@@ -104,10 +104,10 @@ class App extends React.Component {
                   />
                 )}
               />   
-            ) : ( 
+            {/* ) : (  */}
            <Route
                 exact
-                path='/'
+                path='/LandingPage'
                 component={props => (
                   <Landingpage
                     {...props}
@@ -115,7 +115,8 @@ class App extends React.Component {
                     investor={this.state.investorId}
                   />
                 )}
-              />)}
+              />
+              {/* )} */}
             <Route
               exact
               path='/InvestorsPage'

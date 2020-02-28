@@ -67,7 +67,7 @@ class Markets extends React.Component {
             4434,
             4242
           ],
-          backgroundColor: ['rgb(217, 6, 6)']
+          backgroundColor: ['#87CEFA']
         }
       ]
     }

@@ -14,9 +14,9 @@ class InfoTwo extends React.Component {
     }
 
     return (
-      <div className='stxbtn'>
+      <div>
         <section>
-          <h1>
+          <h1 className='stoxmarkettitle'>
             Who gives the stock their price? & What affects these markets?
           </h1>
           <Button

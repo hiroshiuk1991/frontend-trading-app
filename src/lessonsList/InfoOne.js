@@ -14,12 +14,12 @@ class InfoOne extends React.Component {
     }
 
     return (
-        <div className='stxbtn'>
+        <div >
         <section>
-          <h1>What is the Stock Market?</h1>
+          <h1 className='stoxmarkettitle'>What is the Stock Market?</h1>
           <Button
             onClick={() => this.customDialog.show()}
-            className='stxbtn'
+            className='stoxmarkettitle'
             variant='contained'
             color='primary'
           >

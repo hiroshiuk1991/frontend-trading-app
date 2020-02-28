@@ -22,20 +22,11 @@ const useStyles = makeStyles({
 })
 
 export default function Lessons () {
-  // const [checked, setChecked] = React.useState(false)
-  // const [checked1, setChecked1] = React.useState(false)
-  // const [redirect, setRedirect] = React.useState(false);
+
 
   const classes = useStyles()
   const history = useHistory()
 
-  // const handleChange = event => {
-  //   setChecked(event.target.checked)
-  // }
-
-  // const handleChange1 = event => {
-  //   setChecked1(event.target.checked1)
-  // }
 
   function handleLessonOneClick() {
     history.push('/lessonone')
@@ -74,12 +65,7 @@ export default function Lessons () {
           </CardActionArea>
           <CardActions>
             
-            {/* <Checkbox
-              checked={checked}
-              onClick={handleChange}
-              value='primary'
-              inputProps={{ 'aria-label': 'primary checkbox' }}
-            /> */}
+
             <Button size='small' color='primary' onClick={() => handleLessonOneClick()}>
               Long Answer
             </Button>
@@ -107,13 +93,7 @@ export default function Lessons () {
             </CardContent>
           </CardActionArea>
           <CardActions>
-            {/* Completed?
-            <Checkbox
-              checked={checked} */}
-              {/* // onClick={handleChange1}
-              value='primary'
-              inputProps={{ 'aria-label': 'primary checkbox' }}
-            /> */}
+           
             <Button size='small' color='primary' onClick={() => handleLessonTwoClick()}>
               Long Answer
             </Button>
@@ -137,13 +117,7 @@ export default function Lessons () {
             </CardContent>
           </CardActionArea>
           <CardActions>
-            {/* Completed? */}
-            {/* <Checkbox
-              // checked={checked}
-              onClick={handleChange}
-              value='primary'
-              inputProps={{ 'aria-label': 'primary checkbox' }}
-            /> */}
+            
             <Button size='small' color='primary' onClick={() => handleLessonThreeClick()}>
               Long Answer
             </Button>
@@ -170,13 +144,7 @@ export default function Lessons () {
             </CardContent>
           </CardActionArea>
           <CardActions>
-            {/* Completed?
-            <Checkbox
-              checked={checked1}
-              onClick={handleChange1}
-              value='primary'
-              inputProps={{ 'aria-label': 'primary checkbox' }}
-            /> */}
+           
             <Button size='small' color='primary' onClick={() => handleLessonFourClick()}>
               Long Answer
             </Button>
