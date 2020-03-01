@@ -48,7 +48,7 @@ class MainQuiz extends React.Component {
     API.quizScore(this.state.score, this.props.investorId).then(score => {
       this.props.addInvestorScore(score)
       alert('Score Saved!')
-      this.props.history.push('/')
+      this.props.history.push('/InvestorsPage')
     })
   }
 

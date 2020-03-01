@@ -30,7 +30,7 @@ const NavBar = ({ name, signOut }) => {
           }}>
             Lessons
           </NavLink>
-          <NavLink to='/Markets' exact className='link' activeStyle={{
+          <NavLink to='/MarketList' exact className='link' activeStyle={{
             fontWeight: "bold",
             color: "blue"
           }}>
@@ -43,7 +43,7 @@ const NavBar = ({ name, signOut }) => {
             Quiz
           </NavLink>
           <h3 className='welcome'> {`Welcome ${name}`} </h3>
-          <Button onClick={signOut} variant='contained' color='primary'>
+          <Button className='signOutButton' onClick={signOut} variant='contained' color='primary'>
             SIGN OUT
           </Button>
           {/* )} */}

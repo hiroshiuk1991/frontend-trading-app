@@ -26,7 +26,7 @@ function landingPage() {
         color='primary'
         onClick={() => landingPage()}
       >
-        Lets Login In
+        Lets Login
       </Button>
     </div>
     </div>

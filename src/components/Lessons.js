@@ -14,7 +14,8 @@ import { useHistory } from 'react-router-dom'
 const useStyles = makeStyles({
   root: {
     maxWidth: 345,
-    marginRight: 40
+    marginRight: 40,
+    marginTop: 350
   },
   media: {
     height: 140
@@ -45,6 +46,7 @@ export default function Lessons () {
   }
 
   return (
+    <div className='backgroundpic'>
     <div className='lessons'>
       <div className='cardContainer'>
         <Card className={classes.root}>
@@ -182,6 +184,7 @@ export default function Lessons () {
           </CardActions>
         </Card>
       </div> */}
+    </div>
     </div>
   )
 }

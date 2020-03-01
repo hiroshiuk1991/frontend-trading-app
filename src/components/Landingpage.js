@@ -67,6 +67,9 @@ export default function LandingPage (props) {
   const classes = useStyles()
   const [nameLogin, setNameLogin] = useState('')
   const [passwordLogin, setPasswordLogin] = useState('')
+  // const [errors, setErrors] = useState({nameLogin: false, passwordLogin: false })
+
+  // const isEnabled = nameLogin.length > 0 && passwordLogin.length > 0;
 
   const history = useHistory()
 
@@ -86,6 +89,7 @@ export default function LandingPage (props) {
   }
 
   return (
+    <div className='backgroundpic'>
     <Grid container component='main' className={classes.root}>
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
@@ -134,6 +138,7 @@ export default function LandingPage (props) {
               variant='contained'
               color='primary'
               className={classes.submit}
+              // disabled={!isEnabled}
               onClick={event => handleSubmit(event)}
             >
               Sign In
@@ -155,5 +160,6 @@ export default function LandingPage (props) {
         </div>
       </Grid>
     </Grid>
+    </div>
   )
 }
