@@ -11,7 +11,7 @@ function landingPage() {
 
 
   return (
-    <div className='backgroundpic'> 
+    <div className='backgroundpicture'> 
     <div className='welcome'>
       <h1>Welome to STOX </h1>
       <h2>

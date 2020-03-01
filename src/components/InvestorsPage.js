@@ -70,6 +70,7 @@ export default function InvestorsPage (props) {
   }
 
   return (
+    <div className='backgroundpicture'>
     <div className='profile'>
       <Card className={classes.root}>
         <CardHeader
@@ -142,6 +143,7 @@ export default function InvestorsPage (props) {
           </Collapse>
         )}
       </Card>
+    </div>
     </div>
   )
 }

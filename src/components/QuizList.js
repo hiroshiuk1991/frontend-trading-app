@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     marginTop: 350
   },
   media: {
-    height: 140,
+    height: 140
   }
 })
 
@@ -28,20 +28,20 @@ export default function QuizList () {
     history.push('/MainQuiz')
   }
 
-  // function handleLessonTwoClick() {
-  //     history.push('/lessontwo')
-  // }
+  function secondQuiz () {
+    history.push('/secondQuiz')
+  }
 
-  // function handleLessonThreeClick() {
-  //     history.push('/lessonthree')
-  // }
+  function thirdQuiz () {
+    history.push('/thirdquiz')
+  }
 
   // function handleLessonFourClick() {
   //     history.push('/lessonfour')
   // }
 
   return (
-    <div className='backgroundpic'>
+    <div className='backgroundpicture'>
       <div className='lessons'>
         <div className='cardContainer'>
           <Card className={classes.root}>
@@ -82,26 +82,11 @@ export default function QuizList () {
                 <Typography gutterBottom variant='h5' component='h2'>
                   2nd Quiz (Market Cycles Quiz)
                 </Typography>
-                <Typography variant='body2' color='textSecondary' component='p'>
-                  Short Answer: Purchasing instances of stocks for a predermined
-                  price.
-                </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
-              {/* Completed?
-            <Checkbox
-              checked={checked} */}
-              {/* // onClick={handleChange1}
-              value='primary'
-              inputProps={{ 'aria-label': 'primary checkbox' }}
-            /> */}
-              <Button
-                size='small'
-                color='primary'
-                //   onClick={() => handleLessonTwoClick()}
-              >
-                Long Answer
+              <Button size='small' color='primary' onClick={() => secondQuiz()}>
+                Click Me!
               </Button>
             </CardActions>
           </Card>
@@ -110,32 +95,18 @@ export default function QuizList () {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image='https://moneymorningnews.weebly.com/uploads/1/2/5/1/12513096/4589669_orig.jpg'
+                image='https://static01.nyt.com/images/2019/01/20/business/20VIEW-illo/merlin_149331819_0656d095-16cd-4a34-b581-0c9cc17b529a-superJumbo.jpg?quality=90&auto=webp'
                 title='Bull/Bear Market'
               />
               <CardContent>
                 <Typography gutterBottom variant='h5' component='h2'>
-                  What's a bull/bear Market?
-                </Typography>
-                <Typography variant='body2' color='textSecondary' component='p'>
-                  Short answer: bull=good market, bear=bad markets
+                  Bear Market Quiz (Market Crashes)
                 </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
-              {/* Completed? */}
-              {/* <Checkbox
-              // checked={checked}
-              onClick={handleChange}
-              value='primary'
-              inputProps={{ 'aria-label': 'primary checkbox' }}
-            /> */}
-              <Button
-                size='small'
-                color='primary'
-                //   onClick={() => handleLessonThreeClick()}
-              >
-                Long Answer
+              <Button size='small' color='primary' onClick={() => thirdQuiz()}>
+                Click Me
               </Button>
             </CardActions>
           </Card>
@@ -152,27 +123,17 @@ export default function QuizList () {
               />
               <CardContent>
                 <Typography gutterBottom variant='h5' component='h2'>
-                  How can I become a successful trader?
-                </Typography>
-                <Typography variant='body2' color='textSecondary' component='p'>
-                  Short Answer: Practice, attention to detail, and luck.
+                  4th Quiz (Hard Quiz)
                 </Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
-              {/* Completed?
-            <Checkbox
-              checked={checked1}
-              onClick={handleChange1}
-              value='primary'
-              inputProps={{ 'aria-label': 'primary checkbox' }}
-            /> */}
               <Button
                 size='small'
                 color='primary'
                 //   onClick={() => handleLessonFourClick()}
               >
-                Long Answer
+                Click Me
               </Button>
             </CardActions>
           </Card>

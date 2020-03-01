@@ -46,7 +46,7 @@ export default function Lessons () {
   }
 
   return (
-    <div className='backgroundpic'>
+    <div className='backgroundpicture'>
     <div className='lessons'>
       <div className='cardContainer'>
         <Card className={classes.root}>
