@@ -142,9 +142,16 @@ ul {
   font-size: calc(10px + 2vmin);
 }
 
+.scoreresults {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 650%;
+  color: rgb(5, 0, 0);
+  text-align: center;
+}
+
 .stoxmarkettitle {
   font-family: Arial, Helvetica, sans-serif;
-  /* margin-left: 300px; */
+  margin-left: 100px;
   font-size: 200%;
   color: white;
   text-align: center;
@@ -160,8 +167,18 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  /* filter: blur(8px); */
-  /* -webkit-filter: blur(8px); */
+}
+
+.backgroundpicture1 {
+  background-image: url('./images/LSE.png');
+  background-color: #cccccc;
+  height: 2500px;
+  width: 80%;
+  margin: 0 auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .welcome {
@@ -184,13 +201,12 @@ ul {
 
 .backgroundpicture {
   background-image: url('./images/LSE.png');
-background-color: #cccccc;
-height: 1000px;
-width: 80%;
-margin: 0 auto;
-background-position: center;
-/* background-repeat: ; */
-background-size: cover;
-position: relative;
-
+  background-color: #cccccc;
+  height: 1000px;
+  width: 80%;
+  margin: 0 auto;
+  background-position: center;
+  /* background-repeat: ; */
+  background-size: cover;
+  position: relative;
 }

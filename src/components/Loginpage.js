@@ -19,7 +19,7 @@ class Loginpage extends React.Component {
       })
       .catch(error => alert(error))
 
-      // API.createScore(this.props.investorId)
+    // API.createScore(this.props.investorId)
   }
 
   handleNewAccount = event =>

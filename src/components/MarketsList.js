@@ -42,6 +42,10 @@ export default function MarketList () {
 
   return (
     <div className='backgroundpicture'>
+      <h2 className='welcome'>
+        These are four of the most impactful financial market downturns, take a
+        look through and try and understand how and why they all happened.
+      </h2>
       <div className='lessons'>
         <div className='cardContainer'>
           <Card className={classes.root}>

@@ -3,40 +3,41 @@ import { Button } from '@material-ui/core'
 import { useHistory } from 'react-router-dom'
 import CardActions from '@material-ui/core/CardActions'
 import Checkbox from '@material-ui/core/Checkbox'
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
-export default function LessonTwo()  {
+export default function LessonTwo () {
   const history = useHistory()
   const [checked, setChecked] = React.useState(false)
 
-
-  function Goback() {
-  history.push('./lessons')
-}
+  function Goback () {
+    history.push('./lessons')
+  }
 
   const handleChange = event => {
     setChecked(event.target.checked)
   }
 
-    return (
-      <div>
+  return (
+    <div className='backgroundpicture'>
       <Button onClick={() => Goback()} variant='contained' color='primary'>
         Back
       </Button>
       <div>
-        <h1>Why do people buy/sell Stock?</h1>
-        <h4>
+        <h1 className='stoxmarkettitle'>Why do people buy/sell Stock?</h1>
+        <p className='paragraph'>
           So we have covered why companies would float on the stock exchange,
           but that is only half of the story. What about the investors, who are
           they, and why do they want to even buy stocks? Well its quite simple,
           its anyone and everyone. As mentioned before, they do this through
           'brokers', the middle-men of the stock markets that make trades on
           your behalf.
-        </h4>
-        <p>
-          The first reason should come as no surprise....money. 
+        </p>
+        <p className='paragraph'>
+          The first reason should come as no surprise....money.
           <br />
           <br />
-          <p>
+          <p className='paragraph'>
             As you probably guessed, the second option is what brings us to the
             Stock Market. There are a huge number of stock markets, London has
             the London Stock exchange (LSE), the USA's main market is the New
@@ -48,18 +49,26 @@ export default function LessonTwo()  {
             (often referred to as 'footsie'), it lists the top 100 companies
             based on highest market price.
           </p>
+          -
         </p>
-      </div>
-        <CardActions>
-          Lesson Completed?
-            <Checkbox
-            checked={checked}
-            onClick={handleChange}
-            value='primary'
-            inputProps={{ 'aria-label': 'primary checkbox' }}
+        <Zoom>
+          <img
+            src='https://nocionesdeeconomiayempresa.files.wordpress.com/2014/06/brokers.jpg'
+            alt='buy and sell'
+            width='500'
+            className='applestock'
           />
-        </CardActions>
+        </Zoom>
       </div>
-    )
-  }
-
+      <CardActions>
+        Lesson Completed?
+        <Checkbox
+          checked={checked}
+          onClick={handleChange}
+          value='primary'
+          inputProps={{ 'aria-label': 'primary checkbox' }}
+        />
+      </CardActions>
+    </div>
+  )
+}

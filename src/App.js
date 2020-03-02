@@ -19,7 +19,7 @@ import Welcome from './components/Welcome'
 import QuizList from './components/QuizList'
 import MarketList from './components/MarketsList'
 import SecondQuiz from './quiz/SecondQuiz'
-
+import EditInvestor from './components/EditInvestor'
 
 class App extends React.Component {
   state = {
@@ -32,13 +32,14 @@ class App extends React.Component {
     score: 0,
     disabled: true,
     isEnd: false,
+    loggedIn: false,
 
     investorScore: []
   }
 
   removeInvestorScore = targetInvestorScoreId => {
-    const investorScore = this.state.investorScore.filter(investorScore =>
-      targetInvestorScoreId !== investorScore.id
+    const investorScore = this.state.investorScore.filter(
+      investorScore => targetInvestorScoreId !== investorScore.id
     )
     this.setState({ investorScore })
   }
@@ -55,16 +56,18 @@ class App extends React.Component {
       investorId: data.investorId
     })
     localStorage.token = data.token
+    this.setState({ loggedIn: true })
   }
 
   signOut = () => {
     this.setState({ name: null })
     localStorage.removeItem('token')
     this.props.history.push('/')
+    this.setState({ loggedIn: false })
   }
 
   investorStateReset = () => {
-    this.setState({ investorId: null, name: null})
+    this.setState({ investorId: null, name: null })
   }
 
   validateInvestor = () => {
@@ -96,28 +99,26 @@ class App extends React.Component {
         <div>
           <Switch>
             {/* {this.state.investorId ? ( */}
-              <Route
-                exact
-                path='/'
-                component={props => (
-                  <Welcome
-                    {...props}
-                  />
-                )}
-              />   
+            <Route
+              exact
+              path='/'
+              component={props => (
+                <Welcome {...props} loggedIn={this.state.loggedIn} />
+              )}
+            />
             {/* ) : (  */}
-           <Route
-                exact
-                path='/LandingPage'
-                component={props => (
-                  <Landingpage
-                    {...props}
-                    login={this.login}
-                    investor={this.state.investorId}
-                  />
-                )}
-              />
-              {/* )} */}
+            <Route
+              exact
+              path='/LandingPage'
+              component={props => (
+                <Landingpage
+                  {...props}
+                  login={this.login}
+                  investor={this.state.investorId}
+                />
+              )}
+            />
+            {/* )} */}
             <Route
               exact
               path='/InvestorsPage'
@@ -127,7 +128,9 @@ class App extends React.Component {
                   name={this.state.name}
                   investorId={this.state.investorId}
                   investorStateReset={this.investorStateReset}
-                  scoreObj={this.state.investorScore.find(score => score.investor_id === this.state.investorId)}
+                  scoreObj={this.state.investorScore.find(
+                    score => score.investor_id === this.state.investorId
+                  )}
                   removeInvestorScore={this.removeInvestorScore}
                 />
               )}
@@ -177,7 +180,11 @@ class App extends React.Component {
               exact
               path='/MainQuiz'
               component={props => (
-                <MainQuiz {...props} investorId={this.state.investorId} addInvestorScore={this.addInvestorScore}/>
+                <MainQuiz
+                  {...props}
+                  investorId={this.state.investorId}
+                  addInvestorScore={this.addInvestorScore}
+                />
               )}
             />
             <Route
@@ -190,23 +197,22 @@ class App extends React.Component {
             <Route
               exact
               path='/QuizList'
-              component={props => (
-                <QuizList {...props}  />
-              )}
+              component={props => <QuizList {...props} />}
             />
             <Route
               exact
               path='/MarketList'
-              component={props => (
-                <MarketList {...props} />
-              )}
+              component={props => <MarketList {...props} />}
             />
             <Route
               exact
               path='/SecondQuiz'
-              component={props => (
-                <SecondQuiz {...props} />
-              )}
+              component={props => <SecondQuiz {...props} />}
+            />
+            <Route
+              exact
+              path='/EditInvestor'
+              component={props => <EditInvestor {...props} />}
             />
           </Switch>
         </div>

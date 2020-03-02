@@ -23,137 +23,146 @@ const useStyles = makeStyles({
 })
 
 export default function Lessons () {
-
-
   const classes = useStyles()
   const history = useHistory()
 
-
-  function handleLessonOneClick() {
+  function handleLessonOneClick () {
     history.push('/lessonone')
   }
 
-  function handleLessonTwoClick() {
+  function handleLessonTwoClick () {
     history.push('/lessontwo')
   }
 
-  function handleLessonThreeClick() {
+  function handleLessonThreeClick () {
     history.push('/lessonthree')
   }
 
-  function handleLessonFourClick() {
+  function handleLessonFourClick () {
     history.push('/lessonfour')
   }
 
   return (
     <div className='backgroundpicture'>
-    <div className='lessons'>
-      <div className='cardContainer'>
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image='https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.upp-prod-eu.s3.amazonaws.com%2Fbd4f2a60-11bb-11ea-a7e6-62bf4f9e548a?fit=scale-down&source=next&width=700'
-              title='Stock Market Screens'
-            />
-            <CardContent>
-              <Typography gutterBottom variant='h5' component='h2'>
-                What is the Stock Market?
-              </Typography>
-              <Typography variant='body2' color='textSecondary' component='p'>
-                Short answer: A world where companies sell themselves
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            
+      <div className='lessons'>
+        <h2 className='welcome'> When you're ready, Click through and complete the lessons!  </h2>
+        <div className='cardContainer'>
+          <Card className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image='https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.upp-prod-eu.s3.amazonaws.com%2Fbd4f2a60-11bb-11ea-a7e6-62bf4f9e548a?fit=scale-down&source=next&width=700'
+                title='Stock Market Screens'
+              />
+              <CardContent>
+                <Typography gutterBottom variant='h5' component='h2'>
+                  What is the Stock Market?
+                </Typography>
+                <Typography variant='body2' color='textSecondary' component='p'>
+                  Short answer: A world where companies sell themselves
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button
+                size='small'
+                color='primary'
+                onClick={() => handleLessonOneClick()}
+              >
+                Long Answer
+              </Button>
+            </CardActions>
+          </Card>
 
-            <Button size='small' color='primary' onClick={() => handleLessonOneClick()}>
-              Long Answer
-            </Button>
-          </CardActions>
-        </Card>
+          <br />
+          <br />
 
-        <br />
-        <br />
-    
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image='https://lh3.googleusercontent.com/p0yHCFBHP-7R3DhwK6rpBb_fkhRzSLXddm8l1zqZHchDHHlbl4h8D7VdMgjxH6JoPtBME5u0j1m-OYSmpcFNuUHiZXTvYBAv=s1200'
-              title='Stock Brokers'
-            />
-            <CardContent>
-              <Typography gutterBottom variant='h5' component='h2'>
-                Why do people buy/sell Stock?
-              </Typography>
-              <Typography variant='body2' color='textSecondary' component='p'>
-                Short Answer: Purchasing instances of stocks for a predermined
-                price.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-           
-            <Button size='small' color='primary' onClick={() => handleLessonTwoClick()}>
-              Long Answer
-            </Button>
-          </CardActions>
-        </Card>
+          <Card className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image='https://lh3.googleusercontent.com/p0yHCFBHP-7R3DhwK6rpBb_fkhRzSLXddm8l1zqZHchDHHlbl4h8D7VdMgjxH6JoPtBME5u0j1m-OYSmpcFNuUHiZXTvYBAv=s1200'
+                title='Stock Brokers'
+              />
+              <CardContent>
+                <Typography gutterBottom variant='h5' component='h2'>
+                  Why do people buy/sell Stock?
+                </Typography>
+                <Typography variant='body2' color='textSecondary' component='p'>
+                  Short Answer: Purchasing instances of stocks for a predermined
+                  price.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button
+                size='small'
+                color='primary'
+                onClick={() => handleLessonTwoClick()}
+              >
+                Long Answer
+              </Button>
+            </CardActions>
+          </Card>
 
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image='https://moneymorningnews.weebly.com/uploads/1/2/5/1/12513096/4589669_orig.jpg'
-              title='Bull/Bear Market'
-            />
-            <CardContent>
-              <Typography gutterBottom variant='h5' component='h2'>
-                What's a bull/bear Market?
-              </Typography>
-              <Typography variant='body2' color='textSecondary' component='p'>
-                Short answer: bull=good market, bear=bad markets
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            
-            <Button size='small' color='primary' onClick={() => handleLessonThreeClick()}>
-              Long Answer
-            </Button>
-          </CardActions>
-        </Card>
+          <Card className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image='https://moneymorningnews.weebly.com/uploads/1/2/5/1/12513096/4589669_orig.jpg'
+                title='Bull/Bear Market'
+              />
+              <CardContent>
+                <Typography gutterBottom variant='h5' component='h2'>
+                  What's a bull/bear Market?
+                </Typography>
+                <Typography variant='body2' color='textSecondary' component='p'>
+                  Short answer: bull=good market, bear=bad markets
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button
+                size='small'
+                color='primary'
+                onClick={() => handleLessonThreeClick()}
+              >
+                Long Answer
+              </Button>
+            </CardActions>
+          </Card>
 
-        <br />
-        <br />
+          <br />
+          <br />
 
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image='https://a9p9n2x2.stackpathcdn.com/wp-content/blogs.dir/1/files/2018/05/2018-05-10-15_03_59-Meet-the-only-female-broker-on-New-Yorks-stock-exchange-BBC-News.jpg'
-              title='Broker'
-            />
-            <CardContent>
-              <Typography gutterBottom variant='h5' component='h2'>
-                How can I become a successful trader?
-              </Typography>
-              <Typography variant='body2' color='textSecondary' component='p'>
-                Short Answer: Practice, attention to detail, and luck.
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-           
-            <Button size='small' color='primary' onClick={() => handleLessonFourClick()}>
-              Long Answer
-            </Button>
-          </CardActions>
-        </Card>
-      </div>
-      {/* <div className='cardContainer'>
+          <Card className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image='https://a9p9n2x2.stackpathcdn.com/wp-content/blogs.dir/1/files/2018/05/2018-05-10-15_03_59-Meet-the-only-female-broker-on-New-Yorks-stock-exchange-BBC-News.jpg'
+                title='Broker'
+              />
+              <CardContent>
+                <Typography gutterBottom variant='h5' component='h2'>
+                  How can I become a successful trader?
+                </Typography>
+                <Typography variant='body2' color='textSecondary' component='p'>
+                  Short Answer: Practice, attention to detail, and luck.
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Button
+                size='small'
+                color='primary'
+                onClick={() => handleLessonFourClick()}
+              >
+                Long Answer
+              </Button>
+            </CardActions>
+          </Card>
+        </div>
+        {/* <div className='cardContainer'>
         <Card className={classes.root}>
           <CardActionArea>
             <CardMedia
@@ -184,7 +193,7 @@ export default function Lessons () {
           </CardActions>
         </Card>
       </div> */}
-    </div>
+      </div>
     </div>
   )
 }

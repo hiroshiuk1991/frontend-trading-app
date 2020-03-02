@@ -43,6 +43,11 @@ export default function QuizList () {
   return (
     <div className='backgroundpicture'>
       <div className='lessons'>
+        <h2 className='welcome'>
+      
+          Once you feel ready, please take the Quiz and check back at your
+          profile page for your score!
+        </h2>
         <div className='cardContainer'>
           <Card className={classes.root}>
             <CardActionArea>
@@ -68,7 +73,7 @@ export default function QuizList () {
             </CardActions>
           </Card>
 
-          <br />
+          {/* <br />
           <br />
 
           <Card className={classes.root}>
@@ -136,7 +141,7 @@ export default function QuizList () {
                 Click Me
               </Button>
             </CardActions>
-          </Card>
+          </Card> */}
         </div>
         {/* <div className='cardContainer'>
         <Card className={classes.root}>

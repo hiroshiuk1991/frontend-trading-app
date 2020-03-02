@@ -8,6 +8,7 @@ import 'react-medium-image-zoom/dist/styles.css'
 import InfoOne from './InfoOne'
 import InfoTwo from './InfoTwo'
 
+
 export default function LessonOne () {
   const history = useHistory()
   const [checked, setChecked] = React.useState(false)
@@ -73,13 +74,15 @@ export default function LessonOne () {
             of Google by the price of them, you will end up with the total net
             worth of Google as a company.
           </p>
+          <p className='paragraph'></p>
+          {/* <InfoOne /> */}
 
           <Zoom>
             <img
               src='https://www.the-sun.com/wp-content/uploads/sites/6/2020/02/AF-GRAPHIC-APPLE-SHARES-V2.jpg'
               alt='coronavirus and apple'
               width='500'
-              // className='applestock'
+              className='applestock'
             />
           </Zoom>
         </div>
