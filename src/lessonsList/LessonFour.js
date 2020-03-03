@@ -17,7 +17,7 @@ export default function LessonFour () {
   }
 
   return (
-    <div>
+    <div className='backgroundpicture'>
       <div>
         <Button
           id='backBtn'
@@ -27,13 +27,13 @@ export default function LessonFour () {
         >
           Back
         </Button>
-        <h1>How to become a successful trader?</h1>
-        <h4>
+        <h1 className='stoxmarkettitle'>How to become a successful trader?</h1>
+        <h4 className='paragraph'>
           There are many factors that will impact how well you will perform as a
           programmer, for instance, your own knowledge of a specific company.
         </h4>
-        <h3>Bull Market</h3>
-        <p>
+        <h3 className='paragraph'>Bull Market</h3>
+        <p className='paragraph'>
           A 'Bull Market' is the average investor's dream. What this means is
           that the market is favourable, if an investor has money floating on
           the market in companies, typical that stock will be appreciating in

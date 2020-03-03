@@ -28,9 +28,9 @@ export default function MarketList () {
     history.push('/Markets')
   }
 
-  // function handleLessonTwoClick() {
-  //     history.push('/lessontwo')
-  // }
+  function handleLessonTwoClick() {
+      history.push('/SecondMarket')
+  }
 
   // function handleLessonThreeClick() {
   //     history.push('/lessonthree')
@@ -97,7 +97,7 @@ export default function MarketList () {
               <Button
                 size='small'
                 color='primary'
-                //   onClick={() => handleLessonTwoClick()}
+                  onClick={() => handleLessonTwoClick()}
               >
                 Click Me
               </Button>

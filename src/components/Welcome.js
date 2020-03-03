@@ -10,7 +10,7 @@ export default function Welcome (props) {
   }
 
   return (
-    <div className='backgroundpicture'>
+    <div className='backgroundpictureLSE'>
       <div className='welcome'>
         <h1>Welome to STOX </h1>
         <h2>

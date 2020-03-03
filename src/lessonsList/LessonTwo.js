@@ -21,7 +21,7 @@ export default function LessonTwo () {
   return (
     <div className='backgroundpicture'>
       <Button
-        id='backBtn'
+        id='backbutton'
         onClick={() => Goback()}
         variant='contained'
         color='primary'
@@ -79,9 +79,6 @@ export default function LessonTwo () {
           </ul>
         </p>
         <h2>  </h2>
-        <h2 className='paragraph'>
-          Click the picture to see how you can get started buying stocks
-        </h2>
         <Zoom>
           <img
             src='https://www.nerdwallet.com/assets/blog/wp-content/uploads/2017/02/How-To-Buy-Stocks-1440x570.jpg'
@@ -90,6 +87,9 @@ export default function LessonTwo () {
             className='applestock'
           />
         </Zoom>
+        <h2 className='picture'>
+          Click the picture to see how you can get started buying stocks
+        </h2>
       </div>
       <CardActions>
         Lesson Completed?

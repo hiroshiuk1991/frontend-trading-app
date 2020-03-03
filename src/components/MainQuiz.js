@@ -2,7 +2,6 @@ import React from 'react'
 import { quizData } from './QuizData'
 import { Button } from '@material-ui/core'
 import API from '../API'
-// import QuizOption from './QuizOption'
 
 class MainQuiz extends React.Component {
   state = {
@@ -104,47 +103,47 @@ class MainQuiz extends React.Component {
     } else {
       return (
         <div className='backgroundpicture'>
-        <div className='questions'>
-          <h1>{this.state.questions} </h1>
-          <span>{`Questions ${currentQuestion}  out of ${quizData.length} remaining `}</span>
-          {options.map(option => (
-            <p
-              className={`ui floating message options
+          <div className='questions'>
+            <h1>{this.state.questions} </h1>
+            <span>{`Questions ${currentQuestion}  out of ${quizData.length} remaining `}</span>
+            {options.map(option => (
+              <p
+                className={`ui floating message options
          ${this.state.myAnswer === option ? 'selected' : null}
          `}
-              onClick={() => this.checkAnswer(option)}
-            >
-              {option}
-            </p>
-            // <QuizOption
-            //   option={option}
-            //   key={option}
-            //   checkAnswer={this.checkAnswer}
-            //   myAnswer={this.myAnswer}
-            // />
-          ))}
-          {currentQuestion < quizData.length - 1 && (
-            <Button
-              className='ui inverted button'
-              variant='contained'
-              color='primary'
-              disabled={this.state.disabled}
-              onClick={this.nextQuestionHandler}
-            >
-              Next
-            </Button>
-          )}
-          {currentQuestion === quizData.length - 1 && (
-            <Button
-              className='ui inverted button'
-              variant='contained'
-              color='primary'
-              onClick={this.finishHandler}
-            >
-              Finish
-            </Button>
-          )}
-        </div>
+                onClick={() => this.checkAnswer(option)}
+              >
+                {option}
+              </p>
+              // <QuizOption
+              //   option={option}
+              //   key={option}
+              //   checkAnswer={this.checkAnswer}
+              //   myAnswer={this.myAnswer}
+              // />
+            ))}
+            {currentQuestion < quizData.length - 1 && (
+              <Button
+                className='ui inverted button'
+                variant='contained'
+                color='primary'
+                disabled={this.state.disabled}
+                onClick={this.nextQuestionHandler}
+              >
+                Next
+              </Button>
+            )}
+            {currentQuestion === quizData.length - 1 && (
+              <Button
+                className='ui inverted button'
+                variant='contained'
+                color='primary'
+                onClick={this.finishHandler}
+              >
+                Finish
+              </Button>
+            )}
+          </div>
         </div>
       )
     }

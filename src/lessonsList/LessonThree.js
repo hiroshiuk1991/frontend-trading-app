@@ -23,7 +23,7 @@ export default function LessonThree () {
     <div className='backgroundpicture'>
       <div>
         <Button
-          id='backBtn'
+          id='backbutton'
           onClick={() => Goback()}
           variant='contained'
           color='primary'
@@ -82,7 +82,9 @@ export default function LessonThree () {
           there isan average of 9 years life for Bull markets, where Bear
           markets tend to last just over 1 year.
         </p>
-        <h3 className='stoxmarkettitle'> Why do you think Bull Markets Last longer than Bear Markets? </h3>
+        <h3 className='stoxmarkettitle'>
+          Why do you think Bull Markets Last longer than Bear Markets?
+        </h3>
       </div>
       <InfoTwo />
       <Zoom>
@@ -93,7 +95,7 @@ export default function LessonThree () {
           className='applestock'
         />
       </Zoom>
-
+      <h3 className='picture' > Click the picture to learn more! </h3>
       <CardActions>Lesson Completed?</CardActions>
       <Checkbox
         checked={checked}

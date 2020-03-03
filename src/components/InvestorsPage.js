@@ -73,7 +73,7 @@ export default function InvestorsPage (props) {
   }
 
   return (
-    <div className='backgroundpicture'>
+    <div className='backgroundpictureLSE'>
       <div className='profile'>
         <Card className={classes.root}>
           <CardHeader

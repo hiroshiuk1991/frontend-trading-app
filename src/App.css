@@ -241,6 +241,7 @@ ul {
   height: 1000px;
   width: 80%;
   margin: 0 auto;
+  margin-top: 50px;
   background-position: center;
   /* background-repeat: ; */
   background-size: cover;
@@ -248,13 +249,27 @@ ul {
 }
 
 #infoBtn {
-  margin-left: 520px !important
+  margin-left: 1090px !important
 }
 
 #backBtn {
-  margin-left: 560px !important;
+  margin-left: 1160px !important;
+}
+
+#backbutton {
+  margin-left: 1260px !important;
+}
+
+.picture {
+  color: white;
+font-size: 130%;
 }
 
 #secondInfoBtn {
-  margin-left: 630px !important;
+  margin-left: 1200px !important;
 }
+/* 
+#signout {
+  margin-right: -200px !important;
+
+} */

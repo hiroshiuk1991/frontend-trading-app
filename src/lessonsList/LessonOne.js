@@ -81,7 +81,6 @@ export default function LessonOne () {
           </p>
           <InfoOne />
           <br />
-          <h2 className='paragraph'> Click on the image below for a better look at how much Apple's stock has fallen. </h2>
           <Zoom>
             <img
               src='https://www.the-sun.com/wp-content/uploads/sites/6/2020/02/AF-GRAPHIC-APPLE-SHARES-V2.jpg'
@@ -90,6 +89,7 @@ export default function LessonOne () {
               className='applestock'
             />
           </Zoom>
+          <h2 className='picture'> Click on the image below for a better look at how much Apple's stock has fallen. </h2>
         </div>
         <CardActions>
           Lesson Completed?
