@@ -43,7 +43,7 @@ export default function Lessons () {
   }
 
   return (
-    <div className='backgroundpicture'>
+    <div className='backgroundpictureLSE'>
       <div className='lessons'>
         <h2 className='welcome'> When you're ready, Click through and complete the lessons!  </h2>
         <div className='cardContainer'>
@@ -56,7 +56,7 @@ export default function Lessons () {
               />
               <CardContent>
                 <Typography gutterBottom variant='h5' component='h2'>
-                  What is the Stock Market?
+                  What Exactly is the Stock Market?
                 </Typography>
                 <Typography variant='body2' color='textSecondary' component='p'>
                   Short answer: A world where companies sell themselves
@@ -114,7 +114,7 @@ export default function Lessons () {
               />
               <CardContent>
                 <Typography gutterBottom variant='h5' component='h2'>
-                  What's a bull/bear Market?
+                  What is a 'bull' and 'bear' Market?
                 </Typography>
                 <Typography variant='body2' color='textSecondary' component='p'>
                   Short answer: bull=good market, bear=bad markets

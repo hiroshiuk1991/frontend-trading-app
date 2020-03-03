@@ -60,10 +60,13 @@
   margin-top: 100px;
 }
 
-.quiz {
+.questions {
   font-family: sans-serif;
   text-align: center;
-  color: black;
+  color: white;
+  font-size: 220%;
+  margin-left: 500px;
+  margin-right: 500px
 }
 body1 {
   font-size: 1.2rem;
@@ -100,10 +103,12 @@ ul {
 .applestock {
   height: 250px;
   width: 300px;
+  margin: 0 auto;
 }
 
 .navbar {
   text-align: center;
+  left: 50%
 }
 
 .result {
@@ -117,8 +122,8 @@ ul {
 }
 
 .profile {
-  margin-left: 600px;
-  margin-top: 90px;
+  margin-left: 1100px;
+  margin-top: 250px;
   position: absolute;
 }
 
@@ -129,9 +134,15 @@ ul {
 }
 
 .lessons {
-  margin-left: 5px;
+  margin-left: 400px;
   position: 0 auto;
 }
+
+.quiz {
+  margin-left: 990px;
+  position: 0 auto;
+}
+
 
 .stxbtn {
   margin-left: 100px;
@@ -151,7 +162,7 @@ ul {
 
 .stoxmarkettitle {
   font-family: Arial, Helvetica, sans-serif;
-  margin-left: 100px;
+  margin-left: 80px;
   font-size: 200%;
   color: white;
   text-align: center;
@@ -190,16 +201,41 @@ ul {
   color: white;
 }
 
+.greeting {
+  text-align: center;
+  position: absolute;
+  top: 31%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: gray;
+}
+
+
+
 .signOutButton {
-  margin-left: 00px;
+  position: left;
+  /* margin-left: 1000px; */
 }
 
 .paragraph {
   text-align: center;
   color: white;
+  font-size: 130%
 }
 
 .backgroundpicture {
+  background-image: url('./images/LSE.png');
+  background-color: #cccccc;
+  height: 1500px;
+  width: 80%;
+  margin: 0 auto;
+  background-position: center;
+  /* background-repeat: ; */
+  background-size: cover;
+  position: relative;
+}
+
+.backgroundpictureLSE {
   background-image: url('./images/LSE.png');
   background-color: #cccccc;
   height: 1000px;
@@ -209,4 +245,16 @@ ul {
   /* background-repeat: ; */
   background-size: cover;
   position: relative;
+}
+
+#infoBtn {
+  margin-left: 520px !important
+}
+
+#backBtn {
+  margin-left: 560px !important;
+}
+
+#secondInfoBtn {
+  margin-left: 630px !important;
 }

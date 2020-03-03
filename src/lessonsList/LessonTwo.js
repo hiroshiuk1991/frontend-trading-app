@@ -20,19 +20,26 @@ export default function LessonTwo () {
 
   return (
     <div className='backgroundpicture'>
-      <Button onClick={() => Goback()} variant='contained' color='primary'>
+      <Button
+        id='backBtn'
+        onClick={() => Goback()}
+        variant='contained'
+        color='primary'
+      >
         Back
       </Button>
       <div>
         <h1 className='stoxmarkettitle'>Why do people buy/sell Stock?</h1>
         <p className='paragraph'>
           So we have covered why companies would float on the stock exchange,
-          but that is only half of the story. What about the investors, who are
-          they, and why do they want to even buy stocks? Well its quite simple,
-          its anyone and everyone. As mentioned before, they do this through
-          'brokers', the middle-men of the stock markets that make trades on
-          your behalf.
+          but that is only half of the story. What about the investors?, who are
+          they?, and why do they want to even buy stocks? Well its quite simple,
+          its anyone and everyone, anyone is able to buy stocks and shares,
+          there are some small requirements, i.e. passport etc, but on the whole
+          anybody can. As mentioned before, they do this through 'brokers', the
+          middle-men of the stock markets that make trades on your behalf.
         </p>
+        <p className='paragraph'> A broker's </p>
         <p className='paragraph'>
           The first reason should come as no surprise....money.
           <br />
@@ -49,11 +56,35 @@ export default function LessonTwo () {
             (often referred to as 'footsie'), it lists the top 100 companies
             based on highest market price.
           </p>
-          -
+          <ul>
+            <h3>
+              Here are a few Brokerage firms that can get you started, click on
+              them
+            </h3>
+            <li>
+              <a href='https://www.hl.co.uk/' target='_blank'>
+                Hargreaves Lansdown
+              </a>
+            </li>
+            <li>
+              <a href='https://robinhood.com/gb/en/' target='_blank'>
+                RobinHood
+              </a>
+            </li>
+            <li>
+              <a href='https://www.fidelity.co.uk/' target='_blank'>
+                Fidelity
+              </a>
+            </li>
+          </ul>
         </p>
+        <h2>  </h2>
+        <h2 className='paragraph'>
+          Click the picture to see how you can get started buying stocks
+        </h2>
         <Zoom>
           <img
-            src='https://nocionesdeeconomiayempresa.files.wordpress.com/2014/06/brokers.jpg'
+            src='https://www.nerdwallet.com/assets/blog/wp-content/uploads/2017/02/How-To-Buy-Stocks-1440x570.jpg'
             alt='buy and sell'
             width='500'
             className='applestock'

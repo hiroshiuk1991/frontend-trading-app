@@ -41,8 +41,8 @@ export default function QuizList () {
   // }
 
   return (
-    <div className='backgroundpicture'>
-      <div className='lessons'>
+    <div className='backgroundpictureLSE'>
+      <div className='quiz'>
         <h2 className='welcome'>
       
           Once you feel ready, please take the Quiz and check back at your
@@ -58,7 +58,7 @@ export default function QuizList () {
               />
               <CardContent>
                 <Typography gutterBottom variant='h5' component='h2'>
-                  1st Quiz (General Knowledge Test)
+                  QUIZ TIME! (General Knowledge Test)
                 </Typography>
               </CardContent>
             </CardActionArea>

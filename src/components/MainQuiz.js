@@ -103,7 +103,8 @@ class MainQuiz extends React.Component {
       )
     } else {
       return (
-        <div className='quiz'>
+        <div className='backgroundpicture'>
+        <div className='questions'>
           <h1>{this.state.questions} </h1>
           <span>{`Questions ${currentQuestion}  out of ${quizData.length} remaining `}</span>
           {options.map(option => (
@@ -143,6 +144,7 @@ class MainQuiz extends React.Component {
               Finish
             </Button>
           )}
+        </div>
         </div>
       )
     }

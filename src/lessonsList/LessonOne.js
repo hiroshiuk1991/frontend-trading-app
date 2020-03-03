@@ -8,7 +8,6 @@ import 'react-medium-image-zoom/dist/styles.css'
 import InfoOne from './InfoOne'
 import InfoTwo from './InfoTwo'
 
-
 export default function LessonOne () {
   const history = useHistory()
   const [checked, setChecked] = React.useState(false)
@@ -25,6 +24,7 @@ export default function LessonOne () {
     <div className='backgroundpicture'>
       <div className='stxbtn'>
         <Button
+          id='backBtn'
           className='stxbtn'
           onClick={() => Goback()}
           variant='contained'
@@ -74,9 +74,14 @@ export default function LessonOne () {
             of Google by the price of them, you will end up with the total net
             worth of Google as a company.
           </p>
-          <p className='paragraph'></p>
-          {/* <InfoOne /> */}
-
+          <p className='paragraph'>
+            Lets take a look at the picture below, it shows how the early stages
+            of corona has affected Apple's stock. 
+           <h2 className='paragraph'>Can you guess why? </h2> 
+          </p>
+          <InfoOne />
+          <br />
+          <h2 className='paragraph'> Click on the image below for a better look at how much Apple's stock has fallen. </h2>
           <Zoom>
             <img
               src='https://www.the-sun.com/wp-content/uploads/sites/6/2020/02/AF-GRAPHIC-APPLE-SHARES-V2.jpg'

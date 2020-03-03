@@ -19,13 +19,18 @@ export default function LessonFour () {
   return (
     <div>
       <div>
-        <Button onClick={() => Goback()} variant='contained' color='primary'>
+        <Button
+          id='backBtn'
+          onClick={() => Goback()}
+          variant='contained'
+          color='primary'
+        >
           Back
         </Button>
         <h1>How to become a successful trader?</h1>
         <h4>
           There are many factors that will impact how well you will perform as a
-          programmer, for instance, your own knowledge of a specific company. 
+          programmer, for instance, your own knowledge of a specific company.
         </h4>
         <h3>Bull Market</h3>
         <p>
@@ -37,7 +42,7 @@ export default function LessonFour () {
       </div>
       <CardActions>
         Lesson Completed?
-            <Checkbox
+        <Checkbox
           checked={checked}
           onClick={handleChange}
           value='primary'
