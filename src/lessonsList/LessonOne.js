@@ -70,14 +70,21 @@ export default function LessonOne () {
           <h3 className='paragraph'>ANSWER:</h3>
           <p className='paragraph'>
             In an indirect way, they provide their own price, as each stock is a
-            slice of the pie. What I mean by that is if you times all the stock
-            of Google by the price of them, you will end up with the total net
-            worth of Google as a company.
+            slice of the pie. If you multiply all the stock of Google by the
+            price of them, you will end up with the total net worth of Google as
+            a company. It is also directly determined by a simple economic
+            prinical of 'Supply and Demand', if more people want to invest in a
+            company because they trust or believe in the products/services, then
+            the price will follow.
+          </p>
+          <p className='paragraph'>
+            For example, if a companies stock is worth £100 a share, and there
+            are 100 shares then £100 x 100 = £10,000
           </p>
           <p className='paragraph'>
             Lets take a look at the picture below, it shows how the early stages
-            of corona has affected Apple's stock. 
-           <h2 className='paragraph'>Can you guess why? </h2> 
+            of corona has affected Apple's stock.
+            <h2 className='paragraph'>Can you guess why? </h2>
           </p>
           <InfoOne />
           <br />
@@ -89,7 +96,10 @@ export default function LessonOne () {
               className='applestock'
             />
           </Zoom>
-          <h2 className='picture'> Click on the image below for a better look at how much Apple's stock has fallen. </h2>
+          <h2 className='picture'>
+            Click on the image below for a better look at how much Apple's stock
+            has fallen.
+          </h2>
         </div>
         <CardActions>
           Lesson Completed?

@@ -131,7 +131,7 @@ export default function MarketList () {
           <br />
           <br />
 
-          <Card className={classes.root}>
+          {/* <Card className={classes.root}>
             <CardActionArea>
               <CardMedia
                 className={classes.media}
@@ -153,7 +153,7 @@ export default function MarketList () {
                 Click Me
               </Button>
             </CardActions>
-          </Card>
+          </Card> */}
         </div>
       </div>
     </div>

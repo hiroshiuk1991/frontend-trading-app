@@ -2,6 +2,7 @@ import React from 'react'
 import { Line } from 'react-chartjs-2'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
+import { Button } from '@material-ui/core'
 
 class Markets extends React.Component {
   state = {
@@ -75,9 +76,21 @@ class Markets extends React.Component {
     }
   }
 
+  goback = () => {
+  this.props.history.push('./MarketList')
+}
+
   render () {
     return (
       <div className='chart'>
+        <Button
+          id='backBtn'
+          onClick={() => this.goback()}
+          variant='contained'
+          color='primary'
+        >
+          Back
+        </Button>
         <div>
           <h1 className='ftse'> The FTSE100 </h1>
 

@@ -17,7 +17,7 @@ export default function LessonFour () {
   }
 
   return (
-    <div className='backgroundpicture'>
+    <div className='backgroundpictureLSE'>
       <div>
         <Button
           id='backBtn'
@@ -29,16 +29,18 @@ export default function LessonFour () {
         </Button>
         <h1 className='stoxmarkettitle'>How to become a successful trader?</h1>
         <h4 className='paragraph'>
-          There are many factors that will impact how well you will perform as a
-          programmer, for instance, your own knowledge of a specific company.
+          There are many factors that will impact how well you will perform on
+          the stock market.
         </h4>
-        <h3 className='paragraph'>Bull Market</h3>
+        <h3 className='paragraph'>Beating the Market?</h3>
         <p className='paragraph'>
-          A 'Bull Market' is the average investor's dream. What this means is
-          that the market is favourable, if an investor has money floating on
-          the market in companies, typical that stock will be appreciating in
-          value.
+          How do you beat the market? This is no simple answer, I think its
+          important to note what beating the market means. In short, it means
+          gaining a return of investment (ROI) larger than the current markets
+          index price. (Indexes are a hypothetical portfolios )
         </p>
+        <h3 className='stoxmarkettitle'> </h3>
+        <p className='paragraph'>X</p>
       </div>
       <CardActions>
         Lesson Completed?

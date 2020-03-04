@@ -56,6 +56,16 @@ export default function LessonTwo () {
             (often referred to as 'footsie'), it lists the top 100 companies
             based on highest market price.
           </p>
+          <h3 className='paragraph'>What is a Porfolio?</h3>
+          <p className='paragraph'>
+            A portfolio is a container of an investors personal investments.
+            This can be in specific stocks (AKA 'equity'), securities or
+            currency. The value of a portfolio is based on the value of the
+            investments inside. A key term to understand is to 'diversify your
+            portfolio', this means to investment in multplie markets to make
+            your investments less vulnerable. i.e. investing in the UK markets,
+            US markets, currency, bonds, gold, housing market, etc.
+          </p>
           <ul>
             <h3>
               Here are a few Brokerage firms that can get you started, click on
@@ -78,7 +88,7 @@ export default function LessonTwo () {
             </li>
           </ul>
         </p>
-        <h2>  </h2>
+        <h2> </h2>
         <Zoom>
           <img
             src='https://www.nerdwallet.com/assets/blog/wp-content/uploads/2017/02/How-To-Buy-Stocks-1440x570.jpg'

@@ -4,6 +4,7 @@ import InfoThree from '../lessonsList/InfoThree'
 import InfoFour from '../lessonsList/InfoFour'
 import InfoFive from '../lessonsList/InfoFive'
 import InfoSeven from '../lessonsList/InfoSeven'
+import { Button } from '@material-ui/core'
 
 class ThirdMarket extends React.Component {
   state = {
@@ -46,10 +47,22 @@ class ThirdMarket extends React.Component {
       ]
     }
   }
+  
+    goback = () => {
+        this.props.history.push('./MarketList')
+    }
 
   render () {
     return (
       <div className='chart'>
+            <Button
+                id='backBtn'
+                onClick={() => this.goback()}
+                variant='contained'
+                color='primary'
+            >
+                Back
+        </Button>
         <div>
           <h1 className='ftse'> The DOW Jones </h1>
 
