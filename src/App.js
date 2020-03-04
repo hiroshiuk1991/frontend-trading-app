@@ -21,6 +21,7 @@ import MarketList from './components/MarketsList'
 import SecondQuiz from './quiz/SecondQuiz'
 import EditInvestor from './components/EditInvestor'
 import SecondMarket from './components/SecondMarket'
+import ThirdMarket from './components/ThirdMarket'
 
 class App extends React.Component {
   state = {
@@ -220,6 +221,11 @@ class App extends React.Component {
               path='/SecondMarket'
               component={props => <SecondMarket {...props} />}
             />
+          <Route
+            exact
+            path='/ThirdMarket'
+            component={props => <ThirdMarket {...props} />}
+          />
           </Switch>
         </div>
       </>

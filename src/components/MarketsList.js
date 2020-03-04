@@ -32,9 +32,9 @@ export default function MarketList () {
       history.push('/SecondMarket')
   }
 
-  // function handleLessonThreeClick() {
-  //     history.push('/lessonthree')
-  // }
+  function handleLessonThreeClick() {
+      history.push('/ThirdMarket')
+  }
 
   // function handleLessonFourClick() {
   //     history.push('/lessonfour')
@@ -113,7 +113,7 @@ export default function MarketList () {
               />
               <CardContent>
                 <Typography gutterBottom variant='h5' component='h2'>
-                  The 1932 Great Depression
+                  The 1920/30's Great Depression
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -121,7 +121,7 @@ export default function MarketList () {
               <Button
                 size='small'
                 color='primary'
-                //   onClick={() => handleLessonThreeClick()}
+                  onClick={() => handleLessonThreeClick()}
               >
                 Click Me
               </Button>

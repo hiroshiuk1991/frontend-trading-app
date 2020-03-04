@@ -21,7 +21,7 @@ export default function LessonOne () {
   }
 
   return (
-    <div className='backgroundpicture'>
+    <div className='backgroundpictureLSE'>
       <div className='stxbtn'>
         <Button
           id='backBtn'

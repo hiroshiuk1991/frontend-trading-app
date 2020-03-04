@@ -19,7 +19,7 @@ export default function LessonTwo () {
   }
 
   return (
-    <div className='backgroundpicture'>
+    <div className='backgroundpictureLSE'>
       <Button
         id='backbutton'
         onClick={() => Goback()}

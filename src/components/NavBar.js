@@ -66,7 +66,7 @@ const NavBar = ({ name, signOut }) => {
           >
             Quiz
           </NavLink>
-          <h3 className='greeting' id-=''> {`Welcome ${name}`} </h3>
+          <h3  id-='name'> {`Welcome ${name}`} </h3>
           <Button
             id='signout'
             className='signOutButton'

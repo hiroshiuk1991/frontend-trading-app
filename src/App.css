@@ -156,7 +156,7 @@ ul {
 .scoreresults {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 650%;
-  color: rgb(5, 0, 0);
+  color:	#000080;
   text-align: center;
 }
 
@@ -268,8 +268,9 @@ font-size: 130%;
 #secondInfoBtn {
   margin-left: 1200px !important;
 }
-/* 
-#signout {
-  margin-right: -200px !important;
 
-} */
+#name {
+  margin-top: 100px; 
+  color: gray;
+
+}

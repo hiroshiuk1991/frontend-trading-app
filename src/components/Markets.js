@@ -1,5 +1,7 @@
 import React from 'react'
 import { Line } from 'react-chartjs-2'
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 class Markets extends React.Component {
   state = {
@@ -97,9 +99,7 @@ class Markets extends React.Component {
           />
         </div>
         <div className='backgroundpicture1'>
-          <h1 className='scoreresults'>
-            The 2008/2009 Financial Market Crash
-          </h1>
+          <h1 className='scoreresults'>The 2008/2009 Financial Market Crash</h1>
           <h2 className='stoxmarkettitle'>
             In 2008/2009 we saw one of the worst financial disasters in modern
             days....So what exactly happened?
@@ -166,6 +166,25 @@ class Markets extends React.Component {
             dominoes stood up right next to each other, one action can have a
             reaction to another. This all culminated as you can see in the
             chart, in the end of 2008.
+          </p>
+          <Zoom>
+            <img
+              src='https://cdn1.i-scmp.com/sites/default/files/styles/1200x800/public/images/methode/2018/09/09/d72a83f0-b3eb-11e8-b224-884456d4cde1_1280x720_142647.JPG?itok=V9X6bUHO'
+              alt='lehman brothers'
+              width='500'
+              className='LehmanBrothers'
+            />
+            <img
+              src='https://ei.marketwatch.com/Multimedia/2013/09/13/Photos/MG/MW-BI445_lehman_20130913144943_MG.jpg?uuid=45ee0e94-1ca5-11e3-9f57-002128040cf6'
+              alt='lehman brothers'
+              width='500'
+              className='LehmanBrothers'
+            />
+          </Zoom>
+          <p className='stoxmarkettitle'>
+            {' '}
+            Lehman Brothers was one of the most imfamous companies that went
+            bust due to the financial crash.{' '}
           </p>
         </div>
       </div>

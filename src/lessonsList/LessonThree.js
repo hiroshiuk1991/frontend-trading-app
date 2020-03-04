@@ -20,7 +20,7 @@ export default function LessonThree () {
   }
 
   return (
-    <div className='backgroundpicture'>
+    <div className='backgroundpictureLSE'>
       <div>
         <Button
           id='backbutton'
