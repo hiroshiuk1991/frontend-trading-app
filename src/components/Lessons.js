@@ -139,15 +139,15 @@ export default function Lessons () {
             <CardActionArea>
               <CardMedia
                 className={classes.media}
-                image='https://a9p9n2x2.stackpathcdn.com/wp-content/blogs.dir/1/files/2018/05/2018-05-10-15_03_59-Meet-the-only-female-broker-on-New-Yorks-stock-exchange-BBC-News.jpg'
+                image='https://onlinemoneyspy.com/wp-content/uploads/2012/12/forex-markets-1254x640.jpg'
                 title='Broker'
               />
               <CardContent>
                 <Typography gutterBottom variant='h5' component='h2'>
-                  How can I become a successful trader?
+                  What are the Forex Markets?
                 </Typography>
                 <Typography variant='body2' color='textSecondary' component='p'>
-                  Short Answer: Practice, attention to detail, and luck.
+                  Short Answer: the price of different countries currency.
                 </Typography>
               </CardContent>
             </CardActionArea>

@@ -173,6 +173,16 @@ ul {
   font-size: calc(10px + 2vmin);
 }
 
+#zoom {
+  margin-left: 800px;
+  margin-top: 80px;
+}
+
+#zzoom {
+  margin-left: 950px;
+}
+
+
 .scoreresults {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 650%;
