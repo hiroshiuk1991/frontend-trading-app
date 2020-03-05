@@ -1,6 +1,8 @@
 import React from 'react'
 import { Line } from 'react-chartjs-2'
 import { Button } from '@material-ui/core'
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 class secondMarket extends React.Component {
   state = {
@@ -48,7 +50,7 @@ class secondMarket extends React.Component {
     return (
       <div className='chart'>
         <Button
-          id='backBtn'
+          id='redirectback'
           onClick={() => this.goback()}
           variant='contained'
           color='primary'
@@ -99,7 +101,19 @@ class secondMarket extends React.Component {
             companies to justify heavily investing in new tech start up
             companies.
           </p>
-        
+
+          <h3 className='stoxmarkettitle'>Did any tech companies survive?</h3>
+          <p className='stoxmarkettitle'>
+            Thats a good question (pats self on shoulder), if we look at the
+            biggest companies in the world, a lot are tech companies and started
+            just before the tech bubble. For instance:
+          </p>
+          <ul className='stoxmarkettitle'>
+            <li>
+              Amazon stayed competitive and diversified their services from just
+              books to CD's and DVD's, which led to more users and thus investor trust grew significantly.
+            </li>
+          </ul>
         </div>
       </div>
     )

@@ -66,7 +66,7 @@
   color: white;
   font-size: 220%;
   margin-left: 500px;
-  margin-right: 500px
+  margin-right: 500px;
 }
 body1 {
   font-size: 1.2rem;
@@ -108,7 +108,7 @@ ul {
 
 .navbar {
   text-align: center;
-  left: 50%
+  left: 50%;
 }
 
 .result {
@@ -122,8 +122,8 @@ ul {
 }
 
 .profile {
-  margin-left: 1100px;
-  margin-top: 250px;
+  margin-left: 1120px;
+  margin-top: 150px;
   position: absolute;
 }
 
@@ -134,15 +134,27 @@ ul {
 }
 
 .lessons {
-  margin-left: 400px;
+  margin-left: 450px;
   position: 0 auto;
 }
+
+.marketlessons {
+  margin-left: 680px;
+  position: 0 auto;
+}
+
+#warren {
+  color: #000080;
+  font-size: 110%;
+  font-weight: bold;
+
+}
+
 
 .quiz {
   margin-left: 990px;
   position: 0 auto;
 }
-
 
 .stxbtn {
   margin-left: 100px;
@@ -156,7 +168,7 @@ ul {
 .scoreresults {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 650%;
-  color:	#000080;
+  color: #000080;
   text-align: center;
 }
 
@@ -210,8 +222,6 @@ ul {
   color: gray;
 }
 
-
-
 .signOutButton {
   position: left;
   /* margin-left: 1000px; */
@@ -220,7 +230,7 @@ ul {
 .paragraph {
   text-align: center;
   color: white;
-  font-size: 130%
+  font-size: 130%;
 }
 
 .backgroundpicture {
@@ -249,7 +259,7 @@ ul {
 }
 
 #infoBtn {
-  margin-left: 1090px !important
+  margin-left: 1090px !important;
 }
 
 #backBtn {
@@ -260,9 +270,14 @@ ul {
   margin-left: 1260px !important;
 }
 
+#redirectback {
+  margin-left: 1565px !important;
+  margin-top: 50px !important;
+}
+
 .picture {
   color: white;
-font-size: 130%;
+  font-size: 130%;
 }
 
 #secondInfoBtn {
@@ -270,7 +285,6 @@ font-size: 130%;
 }
 
 #name {
-  margin-top: 100px; 
+  margin-top: 100px;
   color: gray;
-
 }

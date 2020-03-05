@@ -92,7 +92,11 @@ export default function InvestorsPage (props) {
           />
           <CardMedia
             className={classes.media}
-            image='https://www.retailx.com/wp-content/uploads/2019/12/iStock-476085198.jpg'
+            image={
+              !scoreObj
+                ? 'https://www.retailx.com/wp-content/uploads/2019/12/iStock-476085198.jpg'
+                : 'https://images.markets.businessinsider.com/image/5b3a055b4e04d328008b45c5-1024/gettyimages-492444164-1.jpg'
+            }
             title='Investor Avatar'
           />
           <CardContent>
@@ -144,7 +148,12 @@ export default function InvestorsPage (props) {
                 <Typography paragraph></Typography>
 
                 <Typography paragraph>
-                  {props.name}'s score {scoreObj.score} / 14
+                  <p id='warren'>{props.name}'s score {scoreObj.score} / 14</p>
+                  <p id='warren'>
+                    You've answered some questions right, you've been ranked up
+                    to the old man in the picture, Warren Buffet, the worlds
+                    most famous investor.
+                  </p>
                 </Typography>
 
                 <Button

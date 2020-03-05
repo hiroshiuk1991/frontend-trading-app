@@ -5,6 +5,8 @@ import InfoFour from '../lessonsList/InfoFour'
 import InfoFive from '../lessonsList/InfoFive'
 import InfoSeven from '../lessonsList/InfoSeven'
 import { Button } from '@material-ui/core'
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 class ThirdMarket extends React.Component {
   state = {
@@ -56,7 +58,7 @@ class ThirdMarket extends React.Component {
     return (
       <div className='chart'>
             <Button
-                id='backBtn'
+                id='redirectback'
                 onClick={() => this.goback()}
                 variant='contained'
                 color='primary'
@@ -120,6 +122,14 @@ class ThirdMarket extends React.Component {
             Insurance Corporation(FDIC) and creating the New Deal.
           </p>
           <InfoSeven />
+          <Zoom>
+            <img
+              src='https://media.gettyimages.com/photos/notorious-gangster-al-capone-attempts-to-help-unemployed-men-with-his-picture-id515513312?s=2048x2048'
+              alt='buy and sell'
+              width='500'
+              className='applestock'
+            />
+          </Zoom>
         </div>
       </div>
     )

@@ -84,7 +84,7 @@ class Markets extends React.Component {
     return (
       <div className='chart'>
         <Button
-          id='backBtn'
+          id='redirectback'
           onClick={() => this.goback()}
           variant='contained'
           color='primary'
