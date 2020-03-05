@@ -27,7 +27,7 @@ export default function LessonFour () {
         >
           Back
         </Button>
-        <h1 className='stoxmarkettitle'>How to become a successful trader?</h1>
+        <h1 className='stoxmarkettitle'>Currency Markets?</h1>
         <h4 className='paragraph'>
           There are many factors that will impact how well you will perform on
           the stock market.

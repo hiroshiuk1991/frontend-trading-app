@@ -67,6 +67,15 @@ export default function LessonTwo () {
             US markets, currency, bonds, gold, housing market, etc.
           </p>
           <ul>
+            <h3 className='paragraph'>Beating the Market?</h3>
+            <p className='paragraph'>
+              How do you beat the market? This is no simple answer, I think its
+              important to note what beating the market means. In short, it
+              means gaining a return of investment (ROI) larger than the current
+              markets index price. (Indexes are a hypothetical portfolios in a
+              market, i.e. FTSE or Dow Jones, and said stocks mimic the results
+              of stocks, giving an overall ROI result. )
+            </p>
             <h3>
               Here are a few Brokerage firms that can get you started, click on
               them
@@ -76,11 +85,13 @@ export default function LessonTwo () {
                 Hargreaves Lansdown
               </a>
             </li>
+            <br/>
             <li>
               <a href='https://robinhood.com/gb/en/' target='_blank'>
                 RobinHood
               </a>
             </li>
+            <br />
             <li>
               <a href='https://www.fidelity.co.uk/' target='_blank'>
                 Fidelity
@@ -94,7 +105,7 @@ export default function LessonTwo () {
             src='https://www.nerdwallet.com/assets/blog/wp-content/uploads/2017/02/How-To-Buy-Stocks-1440x570.jpg'
             alt='buy and sell'
             width='500'
-            className='applestock'
+            className='howto'
           />
         </Zoom>
         <h2 className='picture'>

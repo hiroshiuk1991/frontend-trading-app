@@ -57,8 +57,8 @@ export default function QuizList () {
                 title='x'
               />
               <CardContent>
-                <Typography gutterBottom variant='h5' component='h2'>
-                  QUIZ TIME! (General Knowledge Test)
+                <Typography gutterBottom variant='h5' component='h2' id='quiz1'>
+                  QUIZ TIME! - Lets put what you've learnt to the test
                 </Typography>
               </CardContent>
             </CardActionArea>

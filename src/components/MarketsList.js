@@ -43,7 +43,7 @@ export default function MarketList () {
   return (
     <div className='backgroundpictureLSE'>
       <h2 className='welcome'>
-        These are four of the most impactful financial market downturns, take a
+        These are three of the most impactful financial market downturns, take a
         look through and try and understand how and why they all happened.
       </h2>
       <div className='marketlessons'>
@@ -63,6 +63,7 @@ export default function MarketList () {
             </CardActionArea>
             <CardActions>
               <Button
+              id='quiz1'
                 size='small'
                 color='primary'
                 onClick={() => handleMarketsClick()}

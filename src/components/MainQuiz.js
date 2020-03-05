@@ -15,6 +15,10 @@ class MainQuiz extends React.Component {
     finalScore: 0
   }
 
+  goback = () => {
+    this.props.history.push('/MarketList')
+  }
+
   loadQuizData = () => {
     this.setState(() => {
       return {
@@ -102,7 +106,15 @@ class MainQuiz extends React.Component {
       )
     } else {
       return (
-        <div className='backgroundpicture'>
+        <div className='backgroundpictureLSE'>
+          <Button
+            id='backbuttonmarket'
+            onClick={() => this.goback()}
+            variant='contained'
+            color='primary'
+          >
+            Back
+      </Button>
           <div className='questions'>
             <h1>{this.state.questions} </h1>
             <span>{`Questions ${currentQuestion}  out of ${quizData.length} remaining `}</span>

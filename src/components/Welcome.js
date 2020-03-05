@@ -11,18 +11,18 @@ export default function Welcome (props) {
 
   return (
     <div className='backgroundpictureLSE'>
-      <div className='welcome'>
-        <h1>Welome to STOX </h1>
-        <h2>
+      <div className='stoxmarkettitle'>
+        <h1 className='stoxmarkettitle'>Welome to STOX </h1>
+        <h2 className='stoxmarkettitle'>
           The E-Learning Website, dedicated to teach the basics of the Financial
           Markets.
         </h2>
-        <p>
+        <p className='stoxmarkettitle'>
           Throughout this website, you will be able to take our lessons, each
           focusing on a different aspect, and once you feel ready, you can take
           the tests to check how much you've learnt!
         </p>
-        <p> First things first, lets create an account and work through the lessons. </p>
+        <p className='stoxmarkettitle'> First things first, lets create an account and work through the lessons. </p>
         {!props.loggedIn ? (
           <Button
             variant='contained'
