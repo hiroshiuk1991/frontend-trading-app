@@ -275,7 +275,7 @@ ul {
 .backgroundpictureLSE {
   background-image: url('./images/LSE.png');
   background-color: #cccccc;
-  height: 1700px;
+  height: 2500px;
   width: 80%;
   margin: 0 auto;
   margin-top: 50px;
@@ -283,6 +283,11 @@ ul {
   /* background-repeat: ; */
   background-size: cover;
   position: relative;
+}
+
+.ullinks{
+  margin-left: 20px !important;
+  text-align: center;
 }
 
 #infoBtn {

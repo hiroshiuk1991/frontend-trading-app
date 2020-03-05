@@ -98,7 +98,9 @@ export default function LessonFour () {
           stage. There is a 'bid' price and an 'Ask' Price, the first refers to
           the price the currency is willing to bought at, while the latter
           refers to the oprice the seller is willing to sell at. These, like
-          other markets are dictated by outside factors.
+          other markets are dictated by outside factors. However, this spread is
+          how the forex broker's make their money, they take a percentage of the
+          spread.
         </p>
         <div id='zoom3'>
           <Zoom>
@@ -110,6 +112,39 @@ export default function LessonFour () {
             />
           </Zoom>
         </div>
+        <h3 className='stoxmarkettitle'> What are the risks?</h3>
+        <p className='paragraph'>
+          As I mentioned before, with the fx markets, as they are 24 hour, you
+          may be sleeping when something monumentous occurs, or may miss a big
+          movement. This means that when you are looking to sell or buy
+          currency, you may miss your golden oppurtunity.
+        </p>
+        <p className='paragraph'>
+          Also, one of the biggest issues is that the market is incredibly
+          volatile. Whereas your traditional stocks/shares and securities may be
+          able to have more certainty and much slower movements, with FX, the
+          movements can be huge and quick.
+        </p>
+        <h3 className='stoxmarkettitle'> Heres a list of links to FX brokers</h3>
+        <ul className='ullinks'>
+          <li>
+            <a href='https://www.ig.com/uk/trade-forex-with-ig-lp?chid=12&cx_aid=37768&cx_us=ECXDQ8Rl8CKyCb*h9ZnmC5oUfkqm6EyLfgK7zbp::&cx_pg=leveraged&cx_cid=9060' target='_blank'>
+              IG
+            </a>
+          </li>
+          <br />
+          <li>
+            <a href='https://www.cmcmarkets.com/en/' target='_blank'>
+              CMC Markets
+            </a>
+          </li>
+          <br />
+          <li>
+            <a href='https://www.lcg.com/int/' target='_blank'>
+              London Capital Group
+            </a>
+          </li>
+        </ul>
       </div>
       <CardActions>
         Lesson Completed?
