@@ -178,10 +178,19 @@ ul {
   margin-top: 80px;
 }
 
+#zoom3 {
+  margin-left: 1020px;
+  margin-top: 80px;
+}
+
+
 #zzoom {
   margin-left: 950px;
 }
 
+.editUser {
+  margin-left: 1550px !important
+}
 
 .scoreresults {
   font-family: Arial, Helvetica, sans-serif;

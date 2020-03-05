@@ -29,7 +29,7 @@ class Loginpage extends React.Component {
     const { nameSignup, passwordSignup } = this.state
     const { handleCreateAccount, handleNewAccount } = this
     return (
-      <div className='newUser'>
+      <div className='editUser'>
         <TextField
           label='name'
           value={nameSignup}

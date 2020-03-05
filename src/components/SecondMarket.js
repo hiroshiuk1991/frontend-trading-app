@@ -1,8 +1,8 @@
 import React from 'react'
 import { Line } from 'react-chartjs-2'
 import { Button } from '@material-ui/core'
-import Zoom from 'react-medium-image-zoom'
-import 'react-medium-image-zoom/dist/styles.css'
+// import Zoom from 'react-medium-image-zoom'
+// import 'react-medium-image-zoom/dist/styles.css'
 
 class secondMarket extends React.Component {
   state = {

@@ -63,6 +63,7 @@ const patch = (id, data) =>
 
 const updateAccount = (name, password) =>
   patch(investorUrl, { name: name, password: password })
+  
 
 const validate = () => get(validateUrl)
 

@@ -10,30 +10,30 @@ class EditInvestor extends React.Component {
         passwordEdit: ''
     }
 
-    // handleCreateAccount = () => {
-    //     API.createAccount(this.state.nameEdit, this.state.passwordEdit)
-    //         .then(data => {
-    //             if (data.error) throw Error(data.error)
-    //             this.props.login(data)
-    //             this.props.history.push('/InvestorPage')
-    //         })
-    //         .catch(error => alert(error))
+    handleEditAccount = () => {
+        API.updateAccount(this.state.nameEdit, this.state.passwordEdit)
+            .then(data => {
+                if (data.error) throw Error(data.error)
+                this.props.login(data)
+                this.props.history.push('/InvestorPage')
+            })
+            .catch(error => alert(error))
 
-    //     // API.createScore(this.props.investorId)
-    // }
+        // API.createScore(this.props.investorId)
+    }
 
     handleChangeAccount = event =>
         this.setState({ [event.target.name]: event.target.value })
 
     render() {
         const { nameEdit, passwordEdit } = this.state
-        const { handleCreateAccount, handleNewAccount } = this
+        const { handleEditAccount, handleChangeAccount } = this
         return (
-            <div className='newUser'>
+            <div className='editUser'>
                 <TextField
-                    label='name'
+                    label='Name'
                     value={nameEdit}
-                    onChange={handleNewAccount}
+                    onChange={handleChangeAccount}
                     margin='normal'
                     name='nameEdit'
                 />
@@ -41,7 +41,7 @@ class EditInvestor extends React.Component {
                 <TextField
                     label='Password'
                     value={passwordEdit}
-                    onChange={handleNewAccount}
+                    onChange={handleChangeAccount}
                     margin='normal'
                     name='passwordEdit'
                     type='password'
@@ -49,7 +49,7 @@ class EditInvestor extends React.Component {
                 <br />
                 <Button
                     className='btn'
-                    onClick={handleCreateAccount}
+                    onClick={handleEditAccount}
                     variant='contained'
                     color='primary'
                 >

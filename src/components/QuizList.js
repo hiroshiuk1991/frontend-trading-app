@@ -28,13 +28,13 @@ export default function QuizList () {
     history.push('/MainQuiz')
   }
 
-  function secondQuiz () {
-    history.push('/secondQuiz')
-  }
+  // function secondQuiz () {
+  //   history.push('/secondQuiz')
+  // }
 
-  function thirdQuiz () {
-    history.push('/thirdquiz')
-  }
+  // function thirdQuiz () {
+  //   history.push('/thirdquiz')
+  // }
 
   // function handleLessonFourClick() {
   //     history.push('/lessonfour')

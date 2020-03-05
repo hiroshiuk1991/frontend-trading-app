@@ -6,7 +6,6 @@ import Checkbox from '@material-ui/core/Checkbox'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 import InfoOne from './InfoOne'
-import InfoTwo from './InfoTwo'
 
 export default function LessonOne () {
   const history = useHistory()
