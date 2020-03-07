@@ -52,7 +52,7 @@ const deleteInvestor = id => {
 }
 
 const patch = (id, data) =>
-  fetch(investorUrl + id, {
+  fetch(investorUrl+ '/' + id, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
@@ -61,9 +61,9 @@ const patch = (id, data) =>
     body: JSON.stringify(data)
   }).then(resp => resp.json())
 
-const updateAccount = (name, password) =>
-  patch(investorUrl, { name: name, password: password })
-  
+const updateAccount = (id, name, password) =>
+  patch(id, { name: name, password: password })
+
 
 const validate = () => get(validateUrl)
 

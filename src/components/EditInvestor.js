@@ -11,15 +11,13 @@ class EditInvestor extends React.Component {
     }
 
     handleEditAccount = () => {
-        API.updateAccount(this.state.nameEdit, this.state.passwordEdit)
+        API.updateAccount(this.props.investorId, this.state.nameEdit, this.state.passwordEdit)
             .then(data => {
                 if (data.error) throw Error(data.error)
-                this.props.login(data)
                 this.props.history.push('/InvestorPage')
             })
             .catch(error => alert(error))
 
-        // API.createScore(this.props.investorId)
     }
 
     handleChangeAccount = event =>
@@ -53,7 +51,7 @@ class EditInvestor extends React.Component {
                     variant='contained'
                     color='primary'
                 >
-                    Create
+                    Update
         </Button>
             </div>
         )

@@ -16,7 +16,7 @@ class MainQuiz extends React.Component {
   }
 
   goback = () => {
-    this.props.history.push('/MarketList')
+    this.props.history.push('/QuizList')
   }
 
   loadQuizData = () => {

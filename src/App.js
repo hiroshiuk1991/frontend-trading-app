@@ -214,7 +214,7 @@ class App extends React.Component {
             <Route
               exact
               path='/EditInvestor'
-              component={props => <EditInvestor {...props} />}
+              component={props => <EditInvestor {...props} investorId={this.state.investorId} login={this.login} />}
             />
             <Route
               exact

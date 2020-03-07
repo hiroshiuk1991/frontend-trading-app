@@ -72,7 +72,7 @@ export default function InvestorsPage (props) {
   return (
     <div className='backgroundpictureLSE'>
     <h1 className='stoxmarkettitle'> This is your Investor Page </h1>
-      <h3 className='stoxmarkettitle'>Here you can see your score and delete your account you want. </h3>
+      <h3 className='stoxmarkettitle'>Here you can see your score and delete your account if you want. </h3>
       <div className='profile'>
         <Card className={classes.root}>
           <CardHeader
